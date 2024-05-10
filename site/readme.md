@@ -1,0 +1,1 @@
+Placeholder para processo de instalação do site

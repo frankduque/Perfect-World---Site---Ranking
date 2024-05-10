@@ -1,0 +1,1 @@
+Placeholder para as instruções de instalação dos scripts
