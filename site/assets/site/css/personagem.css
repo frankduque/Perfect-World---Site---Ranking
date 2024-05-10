@@ -1,0 +1,1160 @@
+P {
+    margin: 0;
+    padding: 0;
+}
+
+TABLE {
+    border-collapse: collapse;
+}
+
+TABLE TD,
+TABLE TH {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+IMG {
+    border: 0;
+}
+
+TABLE TD IMG {
+    display: block;
+}
+
+.menu A:link,
+.menu A:visited {
+    color: #FD5;
+    text-decoration: none;
+}
+
+.sidebox H2 A {
+    background: url(../img/arrow_up.gif) no-repeat 100% 50%;
+    color: #FFF;
+    display: block;
+    margin-right: -7px;
+}
+
+.sidebox H2 A:hover {
+    text-decoration: none;
+}
+
+.blockpage {
+    position: fixed;
+    background: #000;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    z-index: 100;
+}
+
+.xstooltip {
+    font-size: 11.5px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.plist {
+    color: #000;
+    font-size: 12px;
+    width: 100%;
+    background: #fff;
+    border-collapse: separate;
+}
+
+.plist A:link,
+.plist A:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+.plist A:hover {
+    color: #00F;
+}
+
+.plist .odd {
+    background: #E5E5E5 none repeat scroll 0 0;
+}
+
+.plist .even {
+    background: #D5D5D5 none repeat scroll 0 0;
+}
+
+.ttool {
+    font-size: 11.5px;
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+.ta1,
+.ta2,
+.ta3,
+.ta4 {
+    position: relative;
+    height: 5px;
+    width: 5px;
+    background: url("../img/personagem/od/ta.png") no-repeat 0 0 transparent;
+}
+
+.ta1 {
+    background-position: 0 0;
+}
+
+.ta2 {
+    background-position: -5px 0;
+}
+
+.ta3 {
+    background-position: 0 -5px;
+}
+
+.ta4 {
+    background-position: -5px -5px;
+}
+
+.tl {
+    width: 5px;
+    background: url("../img/personagem/od/tl.png") repeat-y;
+}
+
+.tr {
+    width: 5px;
+    background: url("../img/personagem/od/tr.png") repeat-y;
+}
+
+.tt {
+    height: 5px;
+    background: url("../img/personagem/od/tt.png") repeat-x;
+}
+
+.tb {
+    height: 5px;
+    background: url("../img/personagem/od/tb.png") repeat-x;
+}
+
+.tc {
+    background: url("../img/personagem/od/tc.png") repeat;
+}
+
+.menu {
+    color: #FD5;
+    font-weight: bold;
+    height: 40px;
+}
+
+.sidebox {
+    background: #FFF;
+    font-size: 11px;
+    line-height: 1.4em;
+    margin-bottom: 11px;
+    overflow: hidden;
+    padding: 0 7px;
+    position: relative;
+}
+
+.c_blue,
+.c_b {
+    color: #8080FF;
+}
+
+.c_fiolet {
+    color: #AA32FF;
+}
+
+.c_gold,
+.c_gr,
+.c_bk {
+    color: #FFDC50;
+}
+
+.c_orange {
+    color: #FF6000;
+}
+
+.c_green {
+    color: #6CFB4B;
+}
+
+.c_red {
+    color: #F00;
+}
+
+.c_white {
+    color: #FFF;
+}
+
+.c_gray {
+    color: #B0B0B0;
+}
+
+.c_cyan {
+    color: #80FFFF;
+}
+
+.c_cyan2 {
+    color: #0FF;
+}
+
+.c_s2 {
+    color: #A6CAF0;
+}
+
+.pframe {
+    position: absolute;
+    left: 14px;
+    top: 55px;
+    width: 100px;
+    height: 100px;
+    background: transparent url("../img/personagem/od/portrait.png") no-repeat 0 0;
+}
+
+.skylvl {
+    position: absolute;
+    left: 35px;
+    top: 144px;
+    width: 64px;
+    height: 13px;
+    background: transparent url("../img/personagem/od/sky.png") no-repeat 0 0;
+}
+
+.skytxt {
+    position: absolute;
+    left: 15px;
+    top: 160px;
+    width: 105px;
+}
+
+.skyval {
+    position: absolute;
+    left: 125px;
+    top: 160px;
+}
+
+.skyframe {
+    background: transparent url("../img/personagem/od/portrait_full.png") no-repeat 0 0;
+}
+
+.skyframe_lv1 {
+    background-position: 0 0;
+}
+
+.skyframe_lv2 {
+    background-position: 0 -100px;
+}
+
+.skyframe_lv3 {
+    background-position: 0 -200px;
+}
+
+.skyframe_lv4 {
+    background-position: 0 -300px;
+}
+
+.skyframe_lv5 {
+    background-position: 0 -400px;
+}
+
+.skills {
+    position: absolute;
+    width: 305px;
+    height: 442px;
+    margin-top: 53px;
+    padding-left: 30px;
+}
+
+.sp {
+    background: url(../img/personagem/od/skill_lines.png) no-repeat 0 0;
+    width: 275px;
+    height: 19px;
+}
+
+.sp_mage {
+    background-position: 0 -19px;
+}
+
+.sp_werebeast {
+    background-position: 0 -38px;
+}
+
+.sp_werefox {
+    background-position: 0 -57px;
+}
+
+.sp_elfp {
+    background-position: 0 -76px;
+}
+
+.sp_elfa {
+    background-position: 0 -95px;
+}
+
+.sp_assassin {
+    background-position: 0 -114px;
+}
+
+.sp_psychic {
+    background-position: 0 -133px;
+}
+
+.sp_seeker {
+    background-position: 0 -152px;
+}
+
+.sp_mystic {
+    background-position: 0 -171px;
+}
+
+.sp_duskblade {
+    background-position: 0 -190px;
+}
+
+.sp_stormbringer {
+    background-position: 0 -209px;
+}
+
+.sl {
+    background: url(../img/personagem/od/skill_place_od.png) repeat;
+    position: relative;
+    width: 275px;
+    height: 35px;
+}
+
+.sl_x2 {
+    height: 70px;
+}
+
+.sl_x3 {
+    height: 105px;
+}
+
+.skills-list {
+    width: 295px;
+    height: 375px;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+.sl_h2 {
+    height: 340px;
+}
+
+.sl_h3 {
+    height: 310px;
+}
+
+.qskills {
+    background: url(../img/personagem/od/skill_place_od.png) repeat-y;
+    position: absolute;
+    width: 34px;
+    height: 245px;
+    left: -25px;
+    margin-top: 53px;
+}
+
+.skill,
+.debuff,
+.skill_mark {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+}
+
+.skill {
+    background: url(../img/personagem/od/skill_ico.png) no-repeat 0 0;
+}
+
+.debuff {
+    background: url(../img/personagem/od/debuff_ico.png) no-repeat 0 0;
+}
+
+.skill_mark {
+    background: url(../img/marker.gif) no-repeat 0 0;
+}
+
+.sidebox #panel_head {
+    _height: 25px;
+    background: #679 url(../img/bg_panel.png) no-repeat scroll 0 0;
+    color: #FFF;
+    cursor: hand;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 25px;
+    margin: 0 -7px;
+    min-height: 25px;
+    padding: 0 12px;
+    height: 29px;
+}
+
+.icon {
+    border: 1px solid #000;
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+.atable {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.cnt {
+    margin: 0 auto 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 335px;
+}
+
+.cnt .bpanel {
+    padding: 0;
+    position: relative;
+}
+
+.cnt .bpanel .blank {
+    height: 32px;
+    position: absolute;
+    width: 32px;
+}
+
+.blank {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.cardholder {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background: url("../img/personagem/od/bbpb/cardbb.png") no-repeat 0 0 transparent;
+}
+
+.cardsel {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background: url("../img/personagem/od/bbpb/card_sel.png") no-repeat 0 0 transparent;
+}
+
+.cardholder.active {
+    border: 1px solid #ACA95D;
+}
+
+.caption {
+    color: #FD5;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: Times New Roman, Times New Roman, Times, serif;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+}
+
+.caption_od {
+    color: #FEB;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Narrow, sans-serif;
+    position: absolute;
+    text-align: center;
+}
+
+.male,
+.fmale {
+    position: absolute;
+    width: 79px;
+    height: 150px;
+    background: url("../img/personagem/od/gender_fix.png") no-repeat 0 0;
+}
+
+.male:hover {
+    background-position: -79px 0;
+}
+
+.fmale {
+    margin-left: 10px;
+    background-position: -158px 0;
+}
+
+.fmale:hover {
+    background-position: -239px 0;
+}
+
+.btn_close_od {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.btn_close_od:hover {
+    background-position: -40px 0;
+}
+
+.btn_close_od:active {
+    background-position: -20px 0;
+}
+
+.btn_p,
+.btn_p_d {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: url("../img/personagem/od/pmb.png") no-repeat 0 0;
+}
+
+.btn_p:hover {
+    background-position: -14px 0;
+}
+
+.btn_p:active {
+    background-position: -28px 0;
+}
+
+.btn_p_d {
+    background-position: -42px 0;
+}
+
+.btn_m,
+.btn_m_d {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: url("../img/personagem/od/pmb.png") no-repeat 0 -14px;
+}
+
+.btn_m:hover {
+    background-position: -14px -14px;
+}
+
+.btn_m:active {
+    background-position: -28px -14px;
+}
+
+.btn_m_d {
+    background-position: -42px -14px;
+}
+
+.ccnt {
+    margin: 0 auto 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 314px;
+}
+
+.ccnt .bpanel {
+    background-color: #135;
+    padding: 0;
+    position: relative;
+}
+
+.ccnt .bpanel .blank {
+    height: 32px;
+    position: absolute;
+    width: 32px;
+}
+
+.ccnt .bpanel .tblank {
+    position: absolute;
+    font-size: 12px;
+    text-align: left;
+}
+
+.button_old,
+.button2_old {
+    background: url("../img/old/button_s.png") no-repeat scroll 0 0 transparent;
+    position: absolute;
+    width: 75px;
+    height: 27px;
+    padding-top: 7px;
+    color: #FFCB3B;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button_old,
+.button2_old:hover {
+    background: url("../img/old/button_h.png") no-repeat scroll 0 0 transparent;
+}
+
+.button_gen,
+.button2_gen {
+    background: url("../img/gen/button_s.png") no-repeat scroll 0 0 transparent;
+    position: absolute;
+    width: 69px;
+    height: 23px;
+    padding-top: 3px;
+    color: #FFCB3B;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button_gen,
+.button2_gen:hover {
+    background: url("../img/gen/button_h.png") no-repeat scroll 0 0 transparent;
+}
+
+.button_od,
+.button2_od,
+.button_od_i {
+    position: absolute;
+    padding-top: 3px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.button_od,
+.button_od_i {
+    background: url("../img/personagem/od/btn.png") no-repeat scroll 0 0;
+    width: 76px;
+    height: 21px;
+    color: #FFFBCA;
+}
+
+.button_od_i {
+    color: #AAA;
+    background-position: 0 -72px;
+}
+
+.button_od:hover {
+    background-position: 0 -48px;
+}
+
+.button_od:active {
+    background-position: 0 -24px;
+}
+
+.button2_od {
+    background: url("../img/personagem/od/button2_s.png") no-repeat scroll 0 0 transparent;
+    width: 68px;
+    height: 19px;
+    color: #F4EF82;
+}
+
+.button2_od:hover {
+    background: url("../img/personagem/od/button2_h.png") no-repeat scroll 0 0 transparent;
+}
+
+.button2_od:active {
+    background: url("../img/personagem/od/button2_p.png") no-repeat scroll 0 0 transparent;
+}
+
+.stardsk_od {
+    background: url("../img/personagem/od/stardsk_s.png") no-repeat scroll 0 0 transparent;
+    position: absolute;
+    width: 79px;
+    height: 31px;
+    padding-top: 3px;
+    color: #FFFBCA;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.stardsk_od:hover {
+    background: url("../img/personagem/od/stardsk_h.png") no-repeat scroll 0 0 transparent;
+}
+
+.stardsk_od:active {
+    background: url("../img/personagem/od/stardsk_p.png") no-repeat scroll 0 0 transparent;
+}
+
+.ccnt .bpanel .blank2 {
+    border: 1px solid #444;
+    height: 32px;
+    position: absolute;
+    width: 32px;
+}
+
+.ccnt .bpanel .blank_btn {
+    font-size: 13px;
+    font-weight: bold;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.ccnt .bpanel .characterist {
+    color: #FFCB4A;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.ccnt .bpanel .hpsp_label,
+.rebirth_text,
+.card_text,
+.mer_text {
+    border: 2;
+    color: #FFCB4A;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.ccnt .bpanel .hpsp,
+.rebirth_data,
+.card_data,
+.mer_data {
+    color: White;
+    font-size: 12px;
+    position: absolute;
+    text-align: center;
+}
+
+.mer_data {
+    color: #F00;
+}
+
+.ccnt .bpanel .petsa_label {
+    border: 2;
+    borders: 1px solid #444;
+    color: #FFCB4A;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.ccnt .bpanel .petsa {
+    borders: 1px solid #444;
+    color: White;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+}
+
+.ccnt .bpanel .params {
+    color: White;
+    font-size: 11px;
+    position: absolute;
+    text-align: center;
+}
+
+.ccnt .bpanel .cctable {
+    color: #FFCB4A;
+    font-size: 11.5px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+}
+
+.ccnt .bpanel .cctable .tda {
+    text-align: left;
+    width: 15%;
+}
+
+.ccnt .bpanel .cctable .tdb {
+    text-align: right;
+    width: 20%;
+}
+
+.ccnt .bpanel .cctable .tdc {
+    text-align: right;
+    width: 15%;
+}
+
+.ccnt .bivalue {
+    color: Red;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    position: absolute;
+    font-size: 12px;
+}
+
+.bon {
+    color: White;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    position: absolute;
+    font-size: 12px;
+}
+
+.btable {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.btable .tdk {
+    height: 275px;
+    width: 100%;
+}
+
+.etable {
+    color: #FFF;
+    font-size: 13px;
+    height: 155px;
+    text-align: center;
+    width: 285px;
+    margin-top: 7px;
+}
+
+.item {
+    color: #FFF;
+    font-size: 13px;
+    line-height: 140%;
+    text-align: left;
+    width: auto;
+}
+
+.it_norm {
+    color: #AFA;
+    text-decoration: none;
+}
+
+.it_norm .h {
+    color: #CCF;
+    text-decoration: none;
+}
+
+.it_ban {
+    color: #F11;
+    text-decoration: none;
+}
+
+.param {
+    font-size: 11.5px;
+    height: 100%;
+    width: 100%;
+}
+
+.param .tdk {
+    color: #FD5;
+    line-height: 147%;
+    text-align: left;
+    width: 50%;
+}
+
+.param .tdn {
+    color: White;
+    line-height: 147%;
+    text-align: left;
+    width: 50%;
+}
+
+.param .tda {
+    text-align: left;
+    width: 20%;
+}
+
+.param .tdb {
+    text-align: right;
+    width: 15%;
+}
+
+.param .tdc {
+    text-align: right;
+    width: 15%;
+}
+
+.param .bivalue {
+    color: Red;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.param .bon {
+    color: White;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.pparam {
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+}
+
+.pparam .tdk {
+    color: #FD5;
+    font-weight: bold;
+    line-height: 147%;
+    text-align: left;
+    width: 25%;
+}
+
+.pparam .tdn {
+    color: White;
+    font-weight: bold;
+    line-height: 147%;
+    text-align: left;
+    width: 25%;
+}
+
+.defs {
+    font-size: 11.5px;
+    height: 100%;
+    width: 100%;
+}
+
+.defs .tdk {
+    color: #FD5;
+    height: 35px;
+    line-height: 147%;
+    text-align: left;
+    width: 70%;
+}
+
+.defs .tdk2 {
+    color: #FD5;
+    line-height: 147%;
+    text-align: left;
+    width: 67%;
+}
+
+.defs .tdn {
+    color: White;
+    line-height: 147%;
+    text-align: left;
+    width: 30%;
+}
+
+.ivalue {
+    background: #CCC;
+    font: 10px Tahoma;
+    font-weight: bold;
+    height: 13px;
+    padding: 0;
+    width: 26px;
+}
+
+.ddtable {
+    color: #FD5;
+    font-size: 12px;
+    height: 83px;
+    margin: 0;
+    padding: 0;
+    width: 263px;
+}
+
+#propdiv {
+    height: 128px;
+    width: 300px;
+    overflow: auto;
+    border: 1px solid;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#propdiv #propdiv_list {
+    width: 100%;
+    font-size: 16px;
+}
+
+#propdiv #propdiv_list TD {
+    padding: 3px;
+}
+
+#propdiv #propdiv_list TD:first-child {
+    width: 170px;
+}
+
+#propdiv #ttt TD {
+    padding: 3px;
+}
+
+#propdiv #ttt TD:first-child {
+    width: 170px;
+}
+
+#propdiv #grav TD {
+    padding: 3px;
+    font-size: 16px;
+    color: #FD5;
+}
+
+#propdiv #grav TD:first-child {
+    width: 170px;
+}
+
+.mer_b {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: url("../img/personagem/od/mer_b.png") no-repeat 0 0;
+}
+
+.mer_b.sel {
+    background-position: -75px 0;
+}
+
+.mer_b.activ {
+    background-position: -25px 0;
+}
+
+.mer_b.activ.sel {
+    background-position: -75px 0;
+}
+
+.mer_btnx {
+    position: absolute;
+    left: 363px;
+    top: 145px;
+    width: 165px;
+    height: 165px;
+    background: url("../img/personagem/od/mb_x.png") no-repeat -165px 0;
+}
+
+.mer_btnx:hover,
+.mer_btnx.activ {
+    background-position: 0 0;
+}
+
+.mer_txt {
+    position: absolute;
+    left: 14px;
+    top: 41px;
+    width: 50px;
+    height: 204px;
+    background: url("../img/personagem/od/mer_txt.png") no-repeat 0 0;
+}
+
+.mer_txt.lvl1 {
+    background-position: 0 -204px;
+}
+
+.mer_txt.lvl2 {
+    background-position: 0 -408px;
+}
+
+.mer_txt.lvl3 {
+    background-position: 0 -612px;
+}
+
+.mer_txt.lvl4 {
+    background-position: 0 -816px;
+}
+
+.mb_CV22 {
+    left: 406px;
+    top: 62px;
+}
+
+.mb_CV21 {
+    left: 355px;
+    top: 81px;
+}
+
+.mb_CV18 {
+    left: 315px;
+    top: 115px;
+}
+
+.mb_CV17 {
+    left: 289px;
+    top: 160px;
+}
+
+.mb_CV14 {
+    left: 279px;
+    top: 211px;
+}
+
+.mb_CV6 {
+    left: 287px;
+    top: 264px;
+}
+
+.mb_CV5 {
+    left: 314px;
+    top: 311px;
+}
+
+.mb_CV2 {
+    left: 352px;
+    top: 344px;
+}
+
+.mb_CV1 {
+    left: 399px;
+    top: 366px;
+}
+
+.mb_GV24 {
+    left: 470px;
+    top: 62px;
+}
+
+.mb_GV20 {
+    left: 515px;
+    top: 81px;
+}
+
+.mb_GV16 {
+    left: 551px;
+    top: 113px;
+}
+
+.mb_GV11 {
+    left: 576px;
+    top: 150px;
+}
+
+.mb_GV10 {
+    left: 588px;
+    top: 192px;
+}
+
+.mb_GV9 {
+    left: 588px;
+    top: 236px;
+}
+
+.mb_GV4 {
+    left: 572px;
+    top: 282px;
+}
+
+.mb_GV3 {
+    left: 550px;
+    top: 320px;
+}
+
+.mb_GV2 {
+    left: 513px;
+    top: 349px;
+}
+
+.mb_GV1 {
+    left: 465px;
+    top: 366px;
+}

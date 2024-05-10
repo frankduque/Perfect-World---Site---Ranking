@@ -1,0 +1,85 @@
+.parsley-errors-list {
+    display: block;
+    width: 100%;
+    list-style: none;
+    font-size: 13px;
+    color: red;
+    padding-left: 0px;
+    margin: 0;
+}
+
+.parsley-type,
+.parsley-pattern,
+.parsley-number,
+.parsley-remote,
+.parsley-uppercase,
+.parsley-lowercase,
+.parsley-equalto,
+.parsley-required,
+.parsley-length {
+    padding: 10px;
+}
+
+#toasty {
+    position: fixed;
+    bottom: 0px;
+    right: -230px;
+    display: none;
+    transition: 0.5s;
+}
+
+#toasty.show {
+    right: -15px;
+}
+
+.configImage {
+    display: block;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100%;
+}
+
+.previewimgcont {
+    border-radius: 5px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    background-color: #f3f3f3;
+}
+
+.modal {
+    overflow: scroll;
+}
+
+.header.bg-gradient-primary.py-7.py-lg-8 {
+    background-image: url(../../site/img/index-header3.jpg) !important;
+    background-position-x: center !important;
+    background-position-y: -80px !important;
+    background-size: cover !important;
+    padding-top: 33rem !important
+}
+
+.modal-title {
+    font-size: 1.0625rem;
+}
+
+.modal-title {
+    line-height: 1.1;
+    margin-bottom: 0;
+}
+
+th {
+    background-color: #f9f9f9;
+}
+
+.table td,
+.table th {
+    white-space: unset;
+}
+
+.mt--20 {
+    margin-top: -20rem !important;
+}

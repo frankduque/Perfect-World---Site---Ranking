@@ -1,0 +1,2399 @@
+section.maps{
+    transition: all 1s cubic-bezier(0.43, 0.49, 0.43, 0.5) 0s;
+}
+li {
+    list-style-type: none
+}
+
+ul {
+    padding: 0
+}
+
+main.ranking {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center
+}
+
+main.ranking div p {
+    color: #fff
+}
+
+main>div>section {
+    width: 50%
+}
+
+.alined-content {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.col-md-lined {
+    border-bottom: 1px solid #ff9e01;
+    margin-bottom: 50px
+}
+
+.col-md-lined a {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-align: justify;
+    padding: 5px 0 1px 0;
+    border-bottom: 4px solid transparent;
+    font-family: 'Caudex Bold';
+    margin-bottom: -3px;
+    margin-right: 15px;
+    color: #755633
+}
+
+.col-md-lined a:first-child {
+    margin-left: 10px
+}
+
+.col-md-lined a:last-child {
+    margin-right: 10px
+}
+
+.col-md-lined a.destaque,
+.col-md-lined a:hover {
+    color: #ff9e01;
+    border-bottom: 2px solid #ff9e01!important
+}
+
+.ranking>div {
+    display: flex;
+    margin-bottom: 60px
+}
+
+.intro>div>a>h2:hover {
+    color: #9e7c1d;
+    border-bottom: 6px solid #9e7c1d
+}
+
+.button {
+    padding: 15px
+}
+
+.button:hover {
+    cursor: pointer
+}
+
+.button>* {
+    color: #fff
+}
+
+.button.highlight>div>h2 {
+    font-size: 28px;
+    margin: 0 0 10px
+}
+
+.button.highlight>div>h3,
+.button.highlight>div>span {
+    font-size: 14px
+}
+
+.draconian .button.highlight>div b,
+.draconian .button.highlight>div p {
+    font-size: 20px
+}
+
+.draconian .button.highlight>div>span>p {
+    margin: 0;
+    font-size: 18px
+}
+
+.button>div>h2 {
+    display: block;
+    margin: 0;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-family: Caudex;
+    font-size: 20px
+}
+
+.button>div b,
+.button>div p,
+.button>div>h3,
+.button>div>span {
+    padding: 2px 0;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Droid
+}
+
+.button>div>h3 {
+    display: inline
+}
+
+.button>div>h3:hover {
+    filter: drop-shadow(0 0 3px gold)
+}
+
+.draconian .button>div>h3 {
+    display: none
+}
+
+.button>div>p {
+    display: inline
+}
+
+.button>div>span>p {
+    margin: 0
+}
+
+.clan img {
+    margin: 0 30px 0 0
+}
+
+.clan ul li {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 30px;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.clan ul li:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    background-color: #f7f1db
+}
+
+.clan>ul>li>div {
+    text-align: justify
+}
+
+.maps ul {
+    width: 553px;
+    height: 585px;
+    position: relative
+}
+
+.maps.draconian ul {
+    width: 506px;
+    height: 348px;
+    position: relative
+}
+
+.maps.bottom {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.maps li {
+    position: absolute
+}
+
+.map_pink {
+    filter: hue-rotate(200deg)
+}
+
+.maps.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2
+}
+
+.color_front_1, .color_1:before {
+    filter: hue-rotate(301deg) brightness(.5) saturate(22)
+}
+
+.color_front_2, .color_2:before  {
+    filter: hue-rotate(50deg) saturate(20) brightness(.8)
+}
+
+.color_front_3, .color_3:before  {
+    filter: hue-rotate(332deg) brightness(.8) saturate(20)
+}
+
+.color_front_4, .color_4:before  {
+    filter: hue-rotate(100deg) saturate(10) brightness(.8)
+}
+
+.color_front_5, .color_5:before  {
+    filter: hue-rotate(360deg) saturate(20) brightness(.9)
+}
+
+.color_front_6, .color_6:before  {
+    filter: hue-rotate(250deg) saturate(30) brightness(.7)
+}
+
+.color_front_7, .color_7:before  {
+    filter: hue-rotate(250deg) saturate(20) brightness(.7)
+}
+
+.color_front_8, .color_8:before  {
+    filter: hue-rotate(314deg) brightness(0.9) saturate(6)
+}
+
+.color_front_9, .color_9:before  {
+    filter: hue-rotate(347deg) brightness(0.8) saturate(16)
+}
+
+.color_front_10, .color_10:before  {
+    filter: hue-rotate(150deg) saturate(20) brightness(.7)
+}
+
+.color_front_11, .color_11:before  {
+    filter: hue-rotate(25deg) saturate(10) brightness(.8);
+}
+
+.color_front_12, .color_12:before  {
+    filter: hue-rotate(332deg) brightness(0.9) saturate(20)
+}
+
+.color_front_13, .color_13:before  {
+    filter: hue-rotate(50deg) saturate(9) brightness(0.9)
+}
+
+.color_front_14, .color_14:before  {
+    filter: hue-rotate(360deg) saturate(20) brightness(1)
+}
+
+.color_front_15, .color_15:before  {
+    filter: hue-rotate(270deg) saturate(32) brightness(0.5)
+}
+
+.color_front_16, .color_16:before  {
+    filter: hue-rotate(300deg) saturate(10) brightness(.8)
+}
+
+.color_front_17, .color_17:before  {
+    filter: hue-rotate(186deg) saturate(115) brightness(0.7)
+}
+
+.color_front_18, .color_18:before  {
+    filter: hue-rotate(213deg) saturate(12) brightness(0.6)
+}
+
+.color_front_19, .color_19:before  {
+    filter: hue-rotate(100deg) saturate(20) brightness(.7)
+}
+
+.color_front_20, .color_20:before  {
+    filter: hue-rotate(100deg) saturate(20) brightness(.8)
+}
+
+.color_front_21, .color_21:before {
+    filter: hue-rotate(200deg) saturate(20) brightness(.7)
+}
+
+.color_front_22, .color_22:before {
+    filter: hue-rotate(200deg) saturate(20) brightness(.8)
+}
+
+.color_front_23, .color_23:before {
+    filter: hue-rotate(300deg) saturate(20) brightness(.7)
+}
+
+.color_front_24, .color_24:before {
+    filter: hue-rotate(360deg) saturate(20) brightness(.7)
+}
+
+.color_front_25, .color_25:before {
+    filter: hue-rotate(50deg) saturate(10) brightness(.7)
+}
+
+.color_front_26, .color_26:before {
+    filter: hue-rotate(100deg) saturate(10) brightness(.7)
+}
+
+.color_front_27, .color_27:before {
+    filter: hue-rotate(150deg) saturate(10) brightness(.7)
+}
+
+.color_front_28, .color_28:before {
+    filter: hue-rotate(200deg) saturate(10) brightness(.7)
+}
+
+.color_front_29, .color_29:before {
+    filter: hue-rotate(250deg) saturate(10) brightness(.7)
+}
+
+.color_front_30, .color_30:before {
+    filter: hue-rotate(300deg) saturate(10) brightness(.7)
+}
+
+.color_front_31, .color_31:before {
+    filter: hue-rotate(360deg) saturate(10) brightness(.7)
+}
+
+.color_front_32, .color_32:before {
+    filter: hue-rotate(150deg) saturate(20) brightness(.8)
+}
+
+.color_front_33, .color_33:before {
+    filter: hue-rotate(300deg) saturate(30) brightness(.7)
+}
+
+.color_front_34, .color_34:before {
+    filter: hue-rotate(360deg) saturate(30) brightness(.7)
+}
+
+.color_front_35, .color_35:before {
+    filter: hue-rotate(50deg) saturate(30) brightness(.7)
+}
+
+.color_front_36, .color_36:before {
+    filter: hue-rotate(100deg) saturate(30) brightness(.7)
+}
+
+.color_front_37, .color_37:before {
+    filter: hue-rotate(150deg) saturate(30) brightness(.7)
+}
+
+.color_front_38, .color_38:before {
+    filter: hue-rotate(200deg) saturate(30) brightness(.7)
+}
+
+.color_front_39 , .color_39:before{
+    filter: hue-rotate(250deg) saturate(40) brightness(.7)
+}
+
+.color_front_40, .color_40:before {
+    filter: hue-rotate(300deg) saturate(40) brightness(.7)
+}
+
+.color_front_41, .color_41:before {
+    filter: hue-rotate(360deg) saturate(40) brightness(.7)
+}
+
+.color_front_42, .color_42:before {
+    filter: hue-rotate(250deg) saturate(50) brightness(.7)
+}
+
+.color_front_43, .color_43:before {
+    filter: hue-rotate(300deg) saturate(50) brightness(.7)
+}
+.color_front_44, .color_44:before {
+    filter: hue-rotate(360deg) saturate(50) brightness(.7)
+}
+
+.color_front_45, .color_45:before {
+    filter: hue-rotate(50deg) saturate(50) brightness(.7)
+}
+
+.color_front_46, .color_46:before {
+    filter: hue-rotate(100deg) saturate(50) brightness(.7)
+}
+.color_front_47, .color_47:before {
+    filter: hue-rotate(150deg) saturate(50) brightness(.7)
+}
+
+.color_front_48, .color_48:before {
+    filter: hue-rotate(200deg) saturate(50) brightness(.7)
+}
+
+.color_front_49, .color_49:before {
+    filter: hue-rotate(250deg) saturate(60) brightness(.7)
+}
+
+.color_front_50, .color_50:before {
+    filter: hue-rotate(300deg) saturate(60) brightness(.7)
+}
+
+.color_front_51, .color_51:before {
+    filter: hue-rotate(360deg) saturate(60) brightness(.7)
+}
+.color_front_52, .color_52:before {
+    filter: hue-rotate(360deg) saturate(60) brightness(.7)
+}
+
+.draconian .color_front_0 {
+    filter: hue-rotate(301deg) brightness(.5) saturate(22) opacity(70%)
+}
+
+.draconian .color_front_1 {
+    filter: hue-rotate(332deg) brightness(.8) saturate(20) opacity(70%)
+}
+
+.draconian .color_front_2 {
+    filter: hue-rotate(206deg) brightness(.4) saturate(30) opacity(70%)
+}
+
+.draconian .color_front_3 {
+    filter: hue-rotate(50deg) saturate(20) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_4 {
+    filter: hue-rotate(100deg) saturate(20) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_5 {
+    filter: hue-rotate(150deg) saturate(20) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_6 {
+    filter: hue-rotate(200deg) saturate(20) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_7 {
+    filter: hue-rotate(250deg) saturate(20) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_8 {
+    filter: hue-rotate(300deg) saturate(20) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_9 {
+    filter: hue-rotate(360deg) saturate(20) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_10 {
+    filter: hue-rotate(50deg) saturate(10) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_11 {
+    filter: hue-rotate(100deg) saturate(10) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_12 {
+    filter: hue-rotate(150deg) saturate(10) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_13 {
+    filter: hue-rotate(200deg) saturate(10) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_14 {
+    filter: hue-rotate(250deg) saturate(10) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_15 {
+    filter: hue-rotate(300deg) saturate(10) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_16 {
+    filter: hue-rotate(360deg) saturate(10) brightness(.8) opacity(70%)
+}
+
+.draconian .color_front_17 {
+    filter: hue-rotate(50deg) saturate(20) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_18 {
+    filter: hue-rotate(100deg) saturate(20) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_19 {
+    filter: hue-rotate(150deg) saturate(20) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_20 {
+    filter: hue-rotate(200deg) saturate(20) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_21 {
+    filter: hue-rotate(250deg) saturate(20) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_22 {
+    filter: hue-rotate(300deg) saturate(20) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_23 {
+    filter: hue-rotate(360deg) saturate(20) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_24 {
+    filter: hue-rotate(50deg) saturate(10) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_25 {
+    filter: hue-rotate(100deg) saturate(10) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_26 {
+    filter: hue-rotate(150deg) saturate(10) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_27 {
+    filter: hue-rotate(200deg) saturate(10) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_28 {
+    filter: hue-rotate(250deg) saturate(10) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_29 {
+    filter: hue-rotate(300deg) saturate(10) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_30 {
+    filter: hue-rotate(360deg) saturate(10) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_31 {
+    filter: hue-rotate(250deg) saturate(30) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_32 {
+    filter: hue-rotate(300deg) saturate(30) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_33 {
+    filter: hue-rotate(360deg) saturate(30) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_34 {
+    filter: hue-rotate(50deg) saturate(30) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_35 {
+    filter: hue-rotate(100deg) saturate(30) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_36 {
+    filter: hue-rotate(150deg) saturate(30) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_37 {
+    filter: hue-rotate(200deg) saturate(30) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_38 {
+    filter: hue-rotate(250deg) saturate(40) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_39 {
+    filter: hue-rotate(300deg) saturate(40) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_40 {
+    filter: hue-rotate(360deg) saturate(40) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_41 {
+    filter: hue-rotate(250deg) saturate(50) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_42 {
+    filter: hue-rotate(300deg) saturate(50) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_43 {
+    filter: hue-rotate(360deg) saturate(50) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_44 {
+    filter: hue-rotate(50deg) saturate(50) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_45 {
+    filter: hue-rotate(100deg) saturate(50) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_46 {
+    filter: hue-rotate(150deg) saturate(50) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_47 {
+    filter: hue-rotate(200deg) saturate(50) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_48 {
+    filter: hue-rotate(250deg) saturate(60) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_49 {
+    filter: hue-rotate(300deg) saturate(60) brightness(.7) opacity(70%)
+}
+
+.draconian .color_front_50 {
+    filter: hue-rotate(360deg) saturate(60) brightness(.7) opacity(70%)
+}
+.maps img {
+    transition: opacity 1s
+}
+
+.psychedelic img {
+    transition: all 2s!important
+}
+
+.psychedelic .color_omega.color_beta {
+    filter: hue-rotate(0)!important
+}
+
+.color_omega.color_beta {
+    opacity: .5
+}
+
+.color_beta {
+    opacity: .5
+}
+
+.maps .map01 {
+    top: 0;
+    left: 0
+}
+
+.maps .map02 {
+    top: 0;
+    left: 83px
+}
+
+.maps .map03 {
+    top: 0;
+    left: 172px
+}
+
+.maps .map04 {
+    top: 0;
+    left: 256px
+}
+
+.maps .map05 {
+    top: 0;
+    left: 369px
+}
+
+.maps .map06 {
+    top: 0;
+    left: 426px
+}
+
+.maps .map07 {
+    top: 78px;
+    left: 0
+}
+
+.maps .map08 {
+    top: 112px;
+    left: 137px
+}
+
+.maps .map09 {
+    top: 82px;
+    left: 178px
+}
+
+.maps .map10 {
+    top: 61px;
+    left: 270px
+}
+
+.maps .map11 {
+    top: 87px;
+    left: 382px
+}
+
+.maps .map12 {
+    top: 51px;
+    left: 379px
+}
+
+.maps .map13 {
+    top: 182px;
+    left: 0
+}
+
+.maps .map14 {
+    top: 181px;
+    left: 87px
+}
+
+.maps .map15 {
+    top: 177px;
+    left: 177px
+}
+
+.maps .map16 {
+    top: 189px;
+    left: 267px
+}
+
+.maps .map17 {
+    top: 134px;
+    left: 380px
+}
+
+.maps .map18 {
+    top: 104px;
+    left: 457px
+}
+
+.maps .map19 {
+    top: 270px;
+    left: 0
+}
+
+.maps .map20 {
+    top: 371px;
+    left: 0
+}
+
+.maps .map21 {
+    top: 416px;
+    left: 20px
+}
+
+.maps .map22 {
+    top: 277px;
+    left: 83px
+}
+
+.maps .map23 {
+    top: 323px;
+    left: 126px
+}
+
+.maps .map24 {
+    top: 266px;
+    left: 184px
+}
+
+.maps .map25 {
+    top: 256px;
+    left: 277px
+}
+
+.maps .map26 {
+    top: 330px;
+    left: 266px
+}
+
+.maps .map27 {
+    top: 235px;
+    left: 343px
+}
+
+.maps .map28 {
+    top: 333px;
+    left: 367px
+}
+
+.maps .map29 {
+    top: 275px;
+    left: 462px
+}
+
+.maps .map30 {
+    top: 368px;
+    left: 465.5px
+}
+
+.maps .map31 {
+    top: 460px;
+    left: 0
+}
+
+.maps .map32 {
+    top: 428px;
+    left: 81px
+}
+
+.maps .map33 {
+    top: 369px;
+    left: 145px
+}
+
+.maps .map34 {
+    top: 458px;
+    left: 171px
+}
+
+.maps .map35 {
+    top: 406px;
+    left: 273px
+}
+
+.maps .map36 {
+    top: 451px;
+    left: 275px
+}
+
+.maps .map37 {
+    top: 460px;
+    left: 367px
+}
+
+.maps .map38 {
+    top: 456px;
+    left: 457.5px
+}
+
+.maps .map39 {
+    top: 538px;
+    left: 0
+}
+
+.maps .map40 {
+    top: 551px;
+    left: 82px
+}
+
+.maps .map41 {
+    top: 556px;
+    left: 183px
+}
+
+.maps .map42 {
+    top: 569px;
+    left: 278px
+}
+
+.maps .map43 {
+    top: 552px;
+    left: 368px
+}
+
+.maps .map44 {
+    top: 551px;
+    left: 409px
+}
+
+.maps .map45 {
+    top: 682px;
+    left: 360px
+}
+
+.maps .map46 {
+    top: 644px;
+    left: 450px
+}
+
+.maps .map47 {
+    top: 730px;
+    left: 455px
+}
+
+.maps .map48 {
+    top: 638px;
+    left: 0
+}
+
+.maps .map49 {
+    top: 629px;
+    left: 84px
+}
+
+.maps .map50 {
+    top: 648px;
+    left: 194px
+}
+
+.maps .map51 {
+    top: 644px;
+    left: 275px
+}
+
+.maps .map52 {
+    top: 0;
+    left: 552px
+}
+
+.maps .grid {
+    top: -1px;
+    left: -1px;
+    pointer-events: none
+}
+
+.maps .bigcastle01,
+.maps .bigcastle02 {
+    background: url(../img/ranking/castelo-grande.png);
+    height: 33px;
+    width: 62px;
+    position: relative
+}
+
+.maps .castle01,
+.maps .castle02,
+.maps .castle03,
+.maps .castle04,
+.maps .castle05,
+.maps .castle06,
+.maps .castle07 {
+    background: url(../img/ranking/castelo-pequeno.png);
+    height: 21px;
+    width: 38px;
+    position: relative
+}
+
+.maps .bigcastle01 {
+    top: 94px;
+    left: 18px
+}
+
+.maps .bigcastle02 {
+    top: 260px;
+    left: 390px
+}
+
+.maps .castle01 {
+    top: 92px;
+    left: 312px
+}
+
+.maps .castle02 {
+    top: 105px;
+    left: 578px
+}
+
+.maps .castle03 {
+    top: 290px;
+    left: 136px
+}
+
+.maps .castle04 {
+    top: 524px;
+    left: 191px
+}
+
+.maps .castle05 {
+    top: 564px;
+    left: 510px
+}
+
+.maps .castle06 {
+    top: 672px;
+    left: 232px
+}
+
+.maps .castle07 {
+    top: 788px;
+    left: 500px
+}
+
+@media (max-width:1366px) {
+    .maps img {
+        transform: scale(.7);
+        transform-origin: top left
+    }
+    .maps .map01 {
+        top: 0;
+        left: 0
+    }
+    .maps .map02 {
+        top: 0;
+        left: 58px
+    }
+    .maps .map03 {
+        top: 0;
+        left: 120px
+    }
+    .maps .map04 {
+        top: 0;
+        left: 179px
+    }
+    .maps .map05 {
+        top: 0;
+        left: 258px
+    }
+    .maps .map06 {
+        top: 0;
+        left: 298px
+    }
+    .maps .map07 {
+        top: 55px;
+        left: 0
+    }
+    .maps .map08 {
+        top: 78px;
+        left: 97px
+    }
+    .maps .map09 {
+        top: 58px;
+        left: 125px
+    }
+    .maps .map10 {
+        top: 42px;
+        left: 188px
+    }
+    .maps .map11 {
+        top: 60px;
+        left: 267px
+    }
+    .maps .map12 {
+        top: 35px;
+        left: 265px
+    }
+    .maps .map13 {
+        top: 128px;
+        left: 0
+    }
+    .maps .map14 {
+        top: 126px;
+        left: 60px
+    }
+    .maps .map15 {
+        top: 124px;
+        left: 123px
+    }
+    .maps .map16 {
+        top: 131px;
+        left: 187px
+    }
+    .maps .map17 {
+        top: 93px;
+        left: 266px
+    }
+    .maps .map18 {
+        top: 72px;
+        left: 320px
+    }
+    .maps .map19 {
+        top: 189px;
+        left: -1px
+    }
+    .maps .map20 {
+        top: 259px;
+        left: 0
+    }
+    .maps .map21 {
+        top: 291px;
+        left: 14px
+    }
+    .maps .map22 {
+        top: 195px;
+        left: 57px
+    }
+    .maps .map23 {
+        top: 226px;
+        left: 88px
+    }
+    .maps .map24 {
+        top: 187px;
+        left: 128px
+    }
+    .maps .map25 {
+        top: 178px;
+        left: 193px
+    }
+    .maps .map26 {
+        top: 230px;
+        left: 186px
+    }
+    .maps .map27 {
+        top: 164px;
+        left: 240px
+    }
+    .maps .map28 {
+        top: 233px;
+        left: 257px
+    }
+    .maps .map29 {
+        top: 192px;
+        left: 323px
+    }
+    .maps .map30 {
+        top: 257px;
+        left: 326px
+    }
+    .maps .map31 {
+        top: 322px;
+        left: 0
+    }
+    .maps .map32 {
+        top: 299px;
+        left: 57px
+    }
+    .maps .map33 {
+        top: 258px;
+        left: 102px
+    }
+    .maps .map34 {
+        top: 320px;
+        left: 119px
+    }
+    .maps .map35 {
+        top: 284px;
+        left: 191px
+    }
+    .maps .map36 {
+        top: 315px;
+        left: 192px
+    }
+    .maps .map37 {
+        top: 321px;
+        left: 256px
+    }
+    .maps .map38 {
+        top: 318px;
+        left: 320px
+    }
+    .maps .map39 {
+        top: 377px;
+        left: -1px
+    }
+    .maps .map40 {
+        top: 386px;
+        left: 57px
+    }
+    .maps .map41 {
+        top: 389px;
+        left: 128px
+    }
+    .maps .map42 {
+        top: 398px;
+        left: 195px
+    }
+    .maps .map43 {
+        top: 386px;
+        left: 257px
+    }
+    .maps .map44 {
+        top: 386px;
+        left: 286px
+    }
+    .maps .map45 {
+        top: 478px;
+        left: 252px
+    }
+    .maps .map46 {
+        top: 450px;
+        left: 314px
+    }
+    .maps .map47 {
+        top: 511px;
+        left: 319px
+    }
+    .maps .map48 {
+        top: 446px;
+        left: 0
+    }
+    .maps .map49 {
+        top: 441px;
+        left: 58px
+    }
+    .maps .map50 {
+        top: 454px;
+        left: 135px
+    }
+    .maps .map51 {
+        top: 451px;
+        left: 192px
+    }
+    .maps .map52 {
+        top: 0;
+        left: 386px
+    }
+    .maps .bigcastle01 {
+        top: 67px;
+        left: 11px
+    }
+    .maps .bigcastle02 {
+        top: 180px;
+        left: 273px
+    }
+    .maps .castle01 {
+        top: 64px;
+        left: 218px
+    }
+    .maps .castle02 {
+        top: 74px;
+        left: 404px
+    }
+    .maps .castle03 {
+        top: 204px;
+        left: 94px
+    }
+    .maps .castle04 {
+        top: 365px;
+        left: 134px
+    }
+    .maps .castle05 {
+        top: 396px;
+        left: 358px
+    }
+    .maps .castle06 {
+        top: 470px;
+        left: 162px
+    }
+    .maps .castle07 {
+        top: 552px;
+        left: 350px
+    }
+}
+
+@media (min-width:1366px) {
+    .maps img {
+        transform: scale(.7);
+        transform-origin: top left
+    }
+    .maps .map01 {
+        top: 0;
+        left: 0
+    }
+    .maps .map02 {
+        top: 0;
+        left: 58px
+    }
+    .maps .map03 {
+        top: 0;
+        left: 120px
+    }
+    .maps .map04 {
+        top: 0;
+        left: 179px
+    }
+    .maps .map05 {
+        top: 0;
+        left: 258px
+    }
+    .maps .map06 {
+        top: 0;
+        left: 298px
+    }
+    .maps .map07 {
+        top: 55px;
+        left: 0
+    }
+    .maps .map08 {
+        top: 78px;
+        left: 96px
+    }
+    .maps .map09 {
+        top: 58px;
+        left: 125px
+    }
+    .maps .map10 {
+        top: 42px;
+        left: 188px
+    }
+    .maps .map11 {
+        top: 60px;
+        left: 267px
+    }
+    .maps .map12 {
+        top: 35px;
+        left: 265px
+    }
+    .maps .map13 {
+        top: 128px;
+        left: 0
+    }
+    .maps .map14 {
+        top: 126px;
+        left: 60px
+    }
+    .maps .map15 {
+        top: 124px;
+        left: 123px
+    }
+    .maps .map16 {
+        top: 131px;
+        left: 187px
+    }
+    .maps .map17 {
+        top: 93px;
+        left: 266px
+    }
+    .maps .map18 {
+        top: 72px;
+        left: 320px
+    }
+    .maps .map19 {
+        top: 189px;
+        left: -1px
+    }
+    .maps .map20 {
+        top: 259px;
+        left: 0
+    }
+    .maps .map21 {
+        top: 291px;
+        left: 14px
+    }
+    .maps .map22 {
+        top: 194px;
+        left: 57px
+    }
+    .maps .map23 {
+        top: 226px;
+        left: 88px
+    }
+    .maps .map24 {
+        top: 187px;
+        left: 128px
+    }
+    .maps .map25 {
+        top: 178px;
+        left: 193px
+    }
+    .maps .map26 {
+        top: 230px;
+        left: 186px
+    }
+    .maps .map27 {
+        top: 164px;
+        left: 240px
+    }
+    .maps .map28 {
+        top: 233px;
+        left: 257px
+    }
+    .maps .map29 {
+        top: 192px;
+        left: 323px
+    }
+    .maps .map30 {
+        top: 257px;
+        left: 326px
+    }
+    .maps .map31 {
+        top: 322px;
+        left: 0
+    }
+    .maps .map32 {
+        top: 299px;
+        left: 57px
+    }
+    .maps .map33 {
+        top: 258px;
+        left: 102px
+    }
+    .maps .map34 {
+        top: 320px;
+        left: 119px
+    }
+    .maps .map35 {
+        top: 284px;
+        left: 191px
+    }
+    .maps .map36 {
+        top: 315px;
+        left: 192px
+    }
+    .maps .map37 {
+        top: 321px;
+        left: 256px
+    }
+    .maps .map38 {
+        top: 318px;
+        left: 320px
+    }
+    .maps .map39 {
+        top: 377px;
+        left: -1px
+    }
+    .maps .map40 {
+        top: 386px;
+        left: 57px
+    }
+    .maps .map41 {
+        top: 389px;
+        left: 128px
+    }
+    .maps .map42 {
+        top: 398px;
+        left: 195px
+    }
+    .maps .map43 {
+        top: 386px;
+        left: 257px
+    }
+    .maps .map44 {
+        top: 386px;
+        left: 286px
+    }
+    .maps .map45 {
+        top: 478px;
+        left: 252px
+    }
+    .maps .map46 {
+        top: 450px;
+        left: 314px
+    }
+    .maps .map47 {
+        top: 511px;
+        left: 319px
+    }
+    .maps .map48 {
+        top: 446px;
+        left: 0
+    }
+    .maps .map49 {
+        top: 441px;
+        left: 58px
+    }
+    .maps .map50 {
+        top: 454px;
+        left: 135px
+    }
+    .maps .map51 {
+        top: 451px;
+        left: 192px
+    }
+    .maps .map52 {
+        top: 0;
+        left: 386px
+    }
+    .maps .bigcastle01 {
+        top: 67px;
+        left: 11px
+    }
+    .maps .bigcastle02 {
+        top: 180px;
+        left: 273px
+    }
+    .maps .castle01 {
+        top: 64px;
+        left: 218px
+    }
+    .maps .castle02 {
+        top: 74px;
+        left: 404px
+    }
+    .maps .castle03 {
+        top: 204px;
+        left: 94px
+    }
+    .maps .castle04 {
+        top: 365px;
+        left: 134px
+    }
+    .maps .castle05 {
+        top: 396px;
+        left: 358px
+    }
+    .maps .castle06 {
+        top: 470px;
+        left: 162px
+    }
+    .maps .castle07 {
+        top: 552px;
+        left: 350px
+    }
+}
+
+.maps.draconian li img {
+    transform: scale(.7);
+    transform-origin: top left
+}
+
+.maps.draconian .map01 {
+    top: 152px;
+    left: 236px
+}
+
+.maps.draconian .map02 {
+    top: 144px;
+    left: 265px
+}
+
+.maps.draconian .map03 {
+    top: 137px;
+    left: 291px
+}
+
+.maps.draconian .map04 {
+    top: 117px;
+    left: 285px
+}
+
+.maps.draconian .map05 {
+    top: 110px;
+    left: 266px
+}
+
+.maps.draconian .map06 {
+    top: 114px;
+    left: 232px
+}
+
+.maps.draconian .map07 {
+    top: 134px;
+    left: 222px
+}
+
+.maps.draconian .map08 {
+    top: 138px;
+    left: 246px
+}
+
+.maps.draconian .map09 {
+    top: 45px;
+    left: 153px
+}
+
+.maps.draconian .map10 {
+    top: 51px;
+    left: 199px
+}
+
+.maps.draconian .map11 {
+    top: 28px;
+    left: 257px
+}
+
+.maps.draconian .map12 {
+    top: 64px;
+    left: 290px
+}
+
+.maps.draconian .map13 {
+    top: 48px;
+    left: 316px
+}
+
+.maps.draconian .map14 {
+    top: 85px;
+    left: 344px
+}
+
+.maps.draconian .map15 {
+    top: 98px;
+    left: 368px
+}
+
+.maps.draconian .map16 {
+    top: 48px;
+    left: 369px
+}
+
+.maps.draconian .map17 {
+    top: 126px;
+    left: 383px
+}
+
+.maps.draconian .map18 {
+    top: 168px;
+    left: 370px
+}
+
+.maps.draconian .map19 {
+    top: 144px;
+    left: 431px
+}
+
+.maps.draconian .map20 {
+    top: 190px;
+    left: 415px
+}
+
+.maps.draconian .map21 {
+    top: 216px;
+    left: 367px
+}
+
+.maps.draconian .map22 {
+    top: 226px;
+    left: 275px
+}
+
+.maps.draconian .map23 {
+    top: 264px;
+    left: 364px
+}
+
+.maps.draconian .map24 {
+    top: 287px;
+    left: 266px
+}
+
+.maps.draconian .map25 {
+    top: 256px;
+    left: 212px
+}
+
+.maps.draconian .map26 {
+    top: 298px;
+    left: 183px
+}
+
+.maps.draconian .map27 {
+    top: 235px;
+    left: 111px
+}
+
+.maps.draconian .map28 {
+    top: 258px;
+    left: 87px
+}
+
+.maps.draconian .map29 {
+    top: 196px;
+    left: 91px
+}
+
+.maps.draconian .map30 {
+    top: 175px;
+    left: 25px
+}
+
+.maps.draconian .map31 {
+    top: 184px;
+    left: 82px
+}
+
+.maps.draconian .map32 {
+    top: 164px;
+    left: 67px
+}
+
+.maps.draconian .map33 {
+    top: 88px;
+    left: 22px
+}
+
+.maps.draconian .map34 {
+    top: 134px;
+    left: 59px
+}
+
+.maps.draconian .map35 {
+    top: 99px;
+    left: 75px
+}
+
+.maps.draconian .map36 {
+    top: 64px;
+    left: 68px
+}
+
+.maps.draconian .map37 {
+    top: 18px;
+    left: 75px
+}
+
+.maps.draconian .map38 {
+    top: 9px;
+    left: 152px
+}
+
+.maps.draconian .map39 {
+    top: 3px;
+    left: 223px
+}
+
+.maps.draconian .map40 {
+    top: 1px;
+    left: 268px
+}
+
+.maps.draconian .map41 {
+    top: 74px;
+    left: 185px
+}
+
+.maps.draconian .map42 {
+    top: 84px;
+    left: 232px
+}
+
+.maps.draconian .map43 {
+    top: 79px;
+    left: 276px
+}
+
+.maps.draconian .map44 {
+    top: 101px;
+    left: 304px
+}
+
+.maps.draconian .map45 {
+    top: 105px;
+    left: 319px
+}
+
+.maps.draconian .map46 {
+    top: 123px;
+    left: 327px
+}
+
+.maps.draconian .map47 {
+    top: 160px;
+    left: 327px
+}
+
+.maps.draconian .map48 {
+    top: 171px;
+    left: 313px
+}
+
+.maps.draconian .map49 {
+    top: 183px;
+    left: 296px
+}
+
+.maps.draconian .map50 {
+    top: 192px;
+    left: 270px
+}
+
+.maps.draconian .map51 {
+    top: 191px;
+    left: 229px
+}
+
+.maps.draconian .map52 {
+    top: 184px;
+    left: 200px
+}
+
+.maps.draconian .map53 {
+    top: 161px;
+    left: 188px
+}
+
+.maps.draconian .map54 {
+    top: 155px;
+    left: 144px
+}
+
+.maps.draconian .map55 {
+    top: 107px;
+    left: 141px
+}
+
+.maps.draconian .map56 {
+    top: 96px;
+    left: 169px
+}
+
+.maps.draconian .grid {
+    top: 0;
+    left: 22px;
+    pointer-events: none
+}
+
+@media (max-width:1300px) {
+    main.ranking {
+        width: 90%
+    }
+}
+
+@media (max-width:1150px) {
+    main.ranking {
+        width: 95%
+    }
+}
+
+@media (max-width:1000px) {
+    main.ranking {
+        width: 100%
+    }
+}
+
+@media (max-width:950px) {
+    main.ranking {
+        width: 80%
+    }
+    .maps {
+        display: none
+    }
+    .ranking>div {
+        justify-content: center
+    }
+    .ranking>div>section {
+        width: auto
+    }
+    .clan ul li {
+        width: 100%
+    }
+    .col-md-lined {
+        margin-bottom: 20px
+    }
+    main h1 {
+        font-size: 2rem
+    }
+}
+
+.mapa1 {
+    width: 97px;
+    height: 87px;
+    background: url('../img/ranking/map_sprites.png') -986px -842px;
+}
+
+.mapa1 {
+    width: 97px;
+    height: 87px;
+    background: url('../img/ranking/map_sprites.png') -986px -842px;
+}
+
+.mapa14 {
+    width: 97px;
+    height: 101px;
+    background: url('../img/ranking/map_sprites.png') -986px -133px;
+}
+
+.mapa8 {
+    width: 47px;
+    height: 71px;
+    background: url('../img/ranking/map_sprites.png') -1106px -452px;
+}
+
+.mapa11 {
+    width: 76px;
+    height: 93px;
+    background: url('../img/ranking/map_sprites.png') -1106px -339px;
+}
+
+.mapa13 {
+    width: 90px;
+    height: 92px;
+    background: url('../img/ranking/map_sprites.png') -500px -325px;
+}
+
+.mapa12 {
+    width: 141px;
+    height: 74px;
+    background: url('../img/ranking/map_sprites.png') -131px -829px;
+}
+
+.mapa16 {
+    width: 127px;
+    height: 90px;
+    background: url('../img/ranking/map_sprites.png') -558px -478px;
+}
+
+.mapa7 {
+    width: 151px;
+    height: 110px;
+    background: url('../img/ranking/map_sprites.png') -329px -325px;
+}
+
+.mapa6 {
+    width: 133px;
+    height: 295px;
+    background: url('../img/ranking/map_sprites.png') -10px -10px;
+}
+
+.mapa3 {
+    width: 104px;
+    height: 90px;
+    background: url('../img/ranking/map_sprites.png') -134px -955px;
+}
+
+.mapa2 {
+    width: 105px;
+    height: 114px;
+    background: url('../img/ranking/map_sprites.png') -859px -144px;
+}
+
+.mapa4 {
+    width: 113px;
+    height: 81px;
+    background: url('../img/ranking/map_sprites.png') -163px -217px;
+}
+
+.mapa15 {
+    width: 101px;
+    height: 106px;
+    background: url('../img/ranking/map_sprites.png') -10px -829px;
+}
+
+.mapa5 {
+    width: 81px;
+    height: 88px;
+    background: url('../img/ranking/map_sprites.png') -1106px -231px;
+}
+
+.mapa9 {
+    width: 111px;
+    height: 110px;
+    background: url('../img/ranking/map_sprites.png') -523px -649px;
+}
+
+.mapa10 {
+    width: 121px;
+    height: 157px;
+    background: url('../img/ranking/map_sprites.png') -610px -10px;
+}
+
+.mapa17 {
+    width: 104px;
+    height: 109px;
+    background: url('../img/ranking/map_sprites.png') -859px -414px;
+}
+
+.mapa19 {
+    width: 134px;
+    height: 106px;
+    background: url('../img/ranking/map_sprites.png') -262px -478px;
+}
+
+.mapa18 {
+    width: 76px;
+    height: 174px;
+    background: url('../img/ranking/map_sprites.png') -751px -204px;
+}
+
+.mapa20 {
+    width: 95px;
+    height: 96px;
+    background: url('../img/ranking/map_sprites.png') -986px -611px;
+}
+
+.mapa21 {
+    width: 116px;
+    height: 58px;
+    background: url('../img/ranking/map_sprites.png') -292px -829px;
+}
+
+.mapa22 {
+    width: 116px;
+    height: 152px;
+    background: url('../img/ranking/map_sprites.png') -610px -188px;
+}
+
+.mapa24 {
+    width: 113px;
+    height: 103px;
+    background: url('../img/ranking/map_sprites.png') -473px -198px;
+}
+
+.mapa25 {
+    width: 94px;
+    height: 102px;
+    background: url('../img/ranking/map_sprites.png') -986px -489px;
+}
+
+.mapa26 {
+    width: 132px;
+    height: 109px;
+    background: url('../img/ranking/map_sprites.png') -317px -182px;
+}
+
+.mapa23 {
+    width: 113px;
+    height: 120px;
+    background: url('../img/ranking/map_sprites.png') -249px -649px;
+}
+
+.mapa27 {
+    width: 132px;
+    height: 128px;
+    background: url('../img/ranking/map_sprites.png') -177px -325px;
+}
+
+.mapa29 {
+    width: 94px;
+    height: 116px;
+    background: url('../img/ranking/map_sprites.png') -859px -543px;
+}
+
+.mapa28 {
+    width: 109px;
+    height: 131px;
+    background: url('../img/ranking/map_sprites.png') -133px -478px;
+}
+
+.mapa34 {
+    width: 117px;
+    height: 168px;
+    background: url('../img/ranking/map_sprites.png') -473px -10px;
+}
+
+.mapa33 {
+    width: 134px;
+    height: 187px;
+    background: url('../img/ranking/map_sprites.png') -163px -10px;
+}
+
+.mapa31 {
+    width: 88px;
+    height: 89px;
+    background: url('../img/ranking/map_sprites.png') -1106px -122px;
+}
+
+.mapa30 {
+    width: 90px;
+    height: 92px;
+    background: url('../img/ranking/map_sprites.png') -1106px -10px;
+}
+
+.mapa32 {
+    width: 136px;
+    height: 152px;
+    background: url('../img/ranking/map_sprites.png') -317px -10px;
+}
+
+.mapa40 {
+    width: 122px;
+    height: 98px;
+    background: url('../img/ranking/map_sprites.png') -416px -478px;
+}
+
+.mapa37 {
+    width: 98px;
+    height: 98px;
+    background: url('../img/ranking/map_sprites.png') -986px -371px;
+}
+
+.mapa39 {
+    width: 91px;
+    height: 118px;
+    background: url('../img/ranking/map_sprites.png') -859px -679px;
+}
+
+.mapa35 {
+    width: 100px;
+    height: 97px;
+    background: url('../img/ranking/map_sprites.png') -986px -254px;
+}
+
+.mapa36 {
+    width: 103px;
+    height: 134px;
+    background: url('../img/ranking/map_sprites.png') -126px -649px;
+}
+
+.mapa38 {
+    width: 98px;
+    height: 116px;
+    background: url('../img/ranking/map_sprites.png') -859px -278px;
+}
+
+.mapa44 {
+    width: 147px;
+    height: 133px;
+    background: url('../img/ranking/map_sprites.png') -10px -325px;
+}
+
+.mapa43 {
+    width: 96px;
+    height: 160px;
+    background: url('../img/ranking/map_sprites.png') -10px -649px;
+}
+
+.mapa46 {
+    width: 106px;
+    height: 96px;
+    background: url('../img/ranking/map_sprites.png') -610px -359px;
+}
+
+.mapa45 {
+    width: 103px;
+    height: 151px;
+    background: url('../img/ranking/map_sprites.png') -10px -478px;
+}
+
+.mapa48 {
+    width: 108px;
+    height: 102px;
+    background: url('../img/ranking/map_sprites.png') -654px -649px;
+}
+
+.mapa49 {
+    width: 121px;
+    height: 110px;
+    background: url('../img/ranking/map_sprites.png') -382px -649px;
+}
+
+.mapa47 {
+    width: 100px;
+    height: 103px;
+    background: url('../img/ranking/map_sprites.png') -986px -10px;
+}
+
+.mapa50 {
+    width: 104px;
+    height: 91px;
+    background: url('../img/ranking/map_sprites.png') -10px -955px;
+}
+
+.mapa52 {
+    width: 88px;
+    height: 174px;
+    background: url('../img/ranking/map_sprites.png') -751px -10px;
+}
+
+.mapa51 {
+    width: 93px;
+    height: 95px;
+    background: url('../img/ranking/map_sprites.png') -986px -727px;
+}
+
+.mapa41 {
+    width: 107px;
+    height: 114px;
+    background: url('../img/ranking/map_sprites.png') -859px -10px;
+}
+
+.mapa42 {
+    width: 94px;
+    height: 87px;
+    background: url('../img/ranking/map_sprites.png') -258px -955px;
+}
+
+.tooltip-inner {
+    text-align: left;
+}
+
+.limapa {
+    width: 0px;
+    height: 0px;
+}
+
+img.iconmap {
+    position: absolute;
+    z-index: 94;
+    background: url(../../upload/guildicons/iconlist_guild.png);
+    background-size: 1560%;
+    width: 20px;
+    height: 20px;
+}
+
+img.iconmap1 {
+    top: 14px;
+    left: 20px;
+}
+
+img.iconmap2 {
+    top: 30px;
+    left: 25px;
+}
+
+img.iconmap3 {
+    top: 20px;
+    left: 23px;
+}
+
+img.iconmap4 {
+    top: 12px;
+    left: 30px;
+}
+
+img.iconmap5 {
+    top: 12px;
+    left: 9px;
+}
+
+img.iconmap6 {
+    top: 16px;
+    left: 45px;
+}
+
+img.iconmap7 {
+    top: 43px;
+    left: 35px;
+}
+
+img.iconmap8 {
+    top: 20px;
+    left: 4px;
+}
+
+img.iconmap9 {
+    top: 23px;
+    left: 25px;
+}
+
+img.iconmap10 {
+    top: 60px;
+    left: 35px;
+}
+
+img.iconmap11 {
+    top: 26px;
+    left: 16px;
+}
+
+img.iconmap12 {
+    top: 11px;
+    left: 43px;
+}
+
+img.iconmap13 {
+    top: 20px;
+    left: 18px;
+}
+
+img.iconmap14 {
+    top: 24px;
+    left: 24px;
+}
+
+img.iconmap15 {
+    top: 25px;
+    left: 25px;
+}
+
+img.iconmap16 {
+    top: 20px;
+    left: 15px;
+}
+
+img.iconmap17 {
+    top: 39px;
+    left: 25px;
+}
+
+img.iconmap18 {
+    top: 17px;
+    left: 21px;
+}
+
+img.iconmap19 {
+    top: 24px;
+    left: 25px;
+}
+
+img.iconmap20 {
+    top: 8px;
+    left: 8px;
+}
+
+img.iconmap21 {
+    top: 7px;
+    left: 25px;
+}
+
+img.iconmap22 {
+    top: 38px;
+    left: 27px;
+}
+
+img.iconmap23 {
+    top: 37px;
+    left: 35px;
+}
+
+img.iconmap24 {
+    top: 24px;
+    left: 28px;
+}
+
+img.iconmap25 {
+    top: 20px;
+    left: 24px;
+}
+
+img.iconmap26 {
+    top: 27px;
+    left: 35px;
+}
+
+img.iconmap27 {
+    top: 50px;
+    left: 39px;
+}
+
+img.iconmap28 {
+    top: 43px;
+    left: 30px;
+}
+
+img.iconmap29 {
+    top: 32px;
+    left: 27px;
+}
+
+img.iconmap30 {
+    top: 28px;
+    left: 23px;
+}
+
+img.iconmap31 {
+    top: 20px;
+    left: 16px;
+}
+
+img.iconmap32 {
+    top: 40px;
+    left: 17px;
+}
+
+img.iconmap33 {
+    top: 48px;
+    left: 42px;
+}
+
+img.iconmap34 {
+    top: 24px;
+    left: 42px;
+}
+
+img.iconmap35 {
+    top: 10px;
+    left: 9px;
+}
+
+img.iconmap36 {
+    top: 48px;
+    left: 24px;
+}
+
+img.iconmap37 {
+    top: 24px;
+    left: 23px;
+}
+
+img.iconmap38 {
+    top: 25px;
+    left: 25px;
+}
+
+img.iconmap39 {
+    top: 23px;
+    left: 16px;
+}
+
+img.iconmap40 {
+    top: 27px;
+    left: 35px;
+}
+
+img.iconmap41 {
+    top: 38px;
+    left: 17px;
+}
+
+img.iconmap42 {
+    top: 18px;
+    left: 20px;
+}
+
+img.iconmap43 {
+    top: 51px;
+    left: 10px;
+}
+
+img.iconmap44 {
+    top: 32px;
+    left: 55px;
+}
+
+img.iconmap45 {
+    top: 50px;
+    left: 23px;
+}
+
+img.iconmap46 {
+    top: 25px;
+    left: 28px;
+}
+
+img.iconmap47 {
+    top: 11px;
+    left: 35px;
+}
+
+img.iconmap48 {
+    top: 27px;
+    left: 21px;
+}
+
+img.iconmap49 {
+    top: 30px;
+    left: 35px;
+}
+
+img.iconmap50 {
+    top: 36px;
+    left: 25px;
+}
+
+img.iconmap51 {
+    top: 23px;
+    left: 23px;
+}
+
+img.iconmap52 {
+    top: 29px;
+    left: 21px;
+}
