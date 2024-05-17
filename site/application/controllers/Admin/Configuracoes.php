@@ -22,6 +22,7 @@ class Configuracoes extends AdminController
     public function __construct()
     {
         parent::__construct();
+        $this->load->library('upload');
 
         $this->load->model('Configuracoes_model', 'Configuracoes');
         if (!$this->has_permission("Gerenciar Configurações")) {

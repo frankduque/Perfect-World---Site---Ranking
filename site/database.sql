@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.10
--- https://www.phpmyadmin.net
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: 11-Ago-2020 às 20:25
--- Versão do servidor: 5.7.31
--- PHP Version: 7.3.21
+-- Host: localhost:3306
+-- Tempo de geração: 17/05/2024 às 00:23
+-- Versão do servidor: 5.7.23-23
+-- Versão do PHP: 8.1.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,41 +18,45 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `site`
+-- Banco de dados: `frankd21_pwranking`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `acessos_paginas`
+-- Estrutura para tabela `acessos_paginas`
 --
 
-CREATE TABLE IF NOT EXISTS `acessos_paginas` (
+CREATE TABLE `acessos_paginas` (
   `id` int(11) NOT NULL,
   `pagina` varchar(255) NOT NULL,
   `acessos` int(11) NOT NULL,
   `ultimo_acesso` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
+-- --------------------------------------------------------
 
 --
--- Estrutura da tabela `acessos_unicos_paginas`
+-- Estrutura para tabela `acessos_unicos_paginas`
 --
 
-CREATE TABLE IF NOT EXISTS `acessos_unicos_paginas` (
+CREATE TABLE `acessos_unicos_paginas` (
   `id` int(11) NOT NULL,
   `pagina` varchar(255) NOT NULL,
   `ip` varchar(30) NOT NULL,
   `ultimo_acesso` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19497 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
+
+-- --------------------------------------------------------
 
 --
--- Estrutura da tabela `anexosnoticias`
+-- Estrutura para tabela `anexosnoticias`
 --
 
-CREATE TABLE IF NOT EXISTS `anexosnoticias` (
+CREATE TABLE `anexosnoticias` (
   `id` int(11) NOT NULL,
   `noticiaid` int(11) NOT NULL,
   `nomeArquivo` varchar(256) NOT NULL,
@@ -63,10 +68,10 @@ CREATE TABLE IF NOT EXISTS `anexosnoticias` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cargos_usuarios`
+-- Estrutura para tabela `cargos_usuarios`
 --
 
-CREATE TABLE IF NOT EXISTS `cargos_usuarios` (
+CREATE TABLE `cargos_usuarios` (
   `id` int(11) NOT NULL,
   `cargo` varchar(255) NOT NULL,
   `permissoes` text NOT NULL,
@@ -77,43 +82,54 @@ CREATE TABLE IF NOT EXISTS `cargos_usuarios` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `categoria_eventos`
+-- Estrutura para tabela `categoria_eventos`
 --
 
-CREATE TABLE IF NOT EXISTS `categoria_eventos` (
-  `id` int(11) NOT NULL,
-  `categoria` varchar(255) NOT NULL,
-  `datacriacao` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-
-
---
--- Estrutura da tabela `categoria_noticias`
---
-
-CREATE TABLE IF NOT EXISTS `categoria_noticias` (
+CREATE TABLE `categoria_eventos` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `datacriacao` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
-
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Estrutura da tabela `categoria_tutoriais`
+-- Despejando dados para a tabela `categoria_eventos`
 --
 
-CREATE TABLE IF NOT EXISTS `categoria_tutoriais` (
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `categoria_noticias`
+--
+
+CREATE TABLE `categoria_noticias` (
   `id` int(11) NOT NULL,
-  `categoria` varchar(255) NOT NULL,
+  `nome` varchar(255) NOT NULL,
   `datacriacao` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
+-- --------------------------------------------------------
 
 --
--- Estrutura da tabela `competitivo_bloqueio`
+-- Estrutura para tabela `categoria_tutoriais`
 --
 
-CREATE TABLE IF NOT EXISTS `competitivo_bloqueio` (
+CREATE TABLE `categoria_tutoriais` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `datacriacao` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `competitivo_bloqueio`
+--
+
+CREATE TABLE `competitivo_bloqueio` (
   `id` int(11) NOT NULL,
   `charid` int(11) NOT NULL,
   `databloqueio` datetime NOT NULL
@@ -122,10 +138,10 @@ CREATE TABLE IF NOT EXISTS `competitivo_bloqueio` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `competitivo_guilds`
+-- Estrutura para tabela `competitivo_guilds`
 --
 
-CREATE TABLE IF NOT EXISTS `competitivo_guilds` (
+CREATE TABLE `competitivo_guilds` (
   `guild_id` int(11) NOT NULL,
   `guild_nome` varchar(255) NOT NULL,
   `level` int(11) NOT NULL,
@@ -138,21 +154,14 @@ CREATE TABLE IF NOT EXISTS `competitivo_guilds` (
   `dataupdate` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Estrutura da tabela `competitivo_mensagens`
---
 
-CREATE TABLE IF NOT EXISTS `competitivo_mensagens` (
-  `id` int(11) NOT NULL,
-  `mensagem` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+-- --------------------------------------------------------
 
 --
---
--- Estrutura da tabela `competitivo_personagens`
+-- Estrutura para tabela `competitivo_personagens`
 --
 
-CREATE TABLE IF NOT EXISTS `competitivo_personagens` (
+CREATE TABLE `competitivo_personagens` (
   `charid` int(11) NOT NULL,
   `userid` int(11) NOT NULL,
   `nome` varchar(60) NOT NULL,
@@ -164,35 +173,39 @@ CREATE TABLE IF NOT EXISTS `competitivo_personagens` (
   `exp` int(11) NOT NULL,
   `reputacao` int(11) NOT NULL,
   `dataupdate` datetime NOT NULL,
-  `guild_id` int(11) NOT NULL,
+  `guild_id` int(11) DEFAULT NULL,
   `equipamentos` text NOT NULL,
   `spouse` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
 
 --
--- Estrutura da tabela `competitivo_pvp`
+-- Estrutura para tabela `competitivo_pvp`
 --
 
-CREATE TABLE IF NOT EXISTS `competitivo_pvp` (
+CREATE TABLE `competitivo_pvp` (
   `id` int(11) NOT NULL,
   `data` datetime NOT NULL,
   `matou_id` int(11) NOT NULL,
   `morreu_id` int(11) NOT NULL,
-  `matou_guild_id` int(11) NOT NULL,
-  `morreu_guild_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=31893 DEFAULT CHARSET=latin1;
+  `matou_guild_id` int(11) DEFAULT NULL,
+  `morreu_guild_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
+-- --------------------------------------------------------
 
 --
--- Estrutura da tabela `competitivo_territorios`
+-- Estrutura para tabela `competitivo_territorios`
 --
 
-CREATE TABLE IF NOT EXISTS `competitivo_territorios` (
+CREATE TABLE `competitivo_territorios` (
   `id` int(11) NOT NULL,
   `level` int(11) NOT NULL,
-  `owner` int(11) NOT NULL,
+  `owner` int(11) DEFAULT NULL,
   `occupy_time` int(11) NOT NULL,
-  `challenger` int(11) NOT NULL,
+  `challenger` int(11) DEFAULT NULL,
   `deposit` int(11) NOT NULL,
   `cutoff_time` int(11) NOT NULL,
   `battle_time` int(11) NOT NULL,
@@ -208,38 +221,40 @@ CREATE TABLE IF NOT EXISTS `competitivo_territorios` (
   `reserved3` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Estrutura da tabela `configuracoes`
+-- Estrutura para tabela `configuracoes`
 --
 
-CREATE TABLE IF NOT EXISTS `configuracoes` (
+CREATE TABLE `configuracoes` (
   `id` int(11) NOT NULL,
   `chave` varchar(255) NOT NULL,
   `valor` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `configuracoes`
+-- Despejando dados para a tabela `configuracoes`
 --
 
 INSERT INTO `configuracoes` (`id`, `chave`, `valor`) VALUES
-(1, 'gerais', '{"nomeservidor":"Perfect World Duque","versaoservidor":"155","linkpainel":"https:\\/\\/painel.oriental-games.com\\/login","vlogo":1,"extlogo":"png","vfavicon":11,"extfavicon":"jpg"}'),
-(2, 'integracoes', '{"usarrecaptcha":0,"recaptchasitekey":"","recaptchasecretkey":"","usardisqus":0,"disqusshortname":"","usarmailchimp":0,"mailchimpcode":"","usaranalytics":0,"analyticsid":"","usarfacebook":1,"linkpaginafacebook":"https:\\/\\/www.facebook.com\\/PWoriental\\/?view_public_for=1180395175455495"}'),
-(3, 'competitivo', '{"usarpvp":1,"mostrarzeradosenegativospvp":0,"pontosmatarpvp":"3","pontosmorrer":null,"usarpve":1,"usartw":1,"guildlisttxtultipdate":"2020-02-12 09:02:23","guildlistpngultipdate":"2020-02-12 09:02:29","usargvg":1,"mostrarzeradosenegativosgvg":0,"usarlistaclans":1,"limiterankingpvp":"50","limiterankingpve":"50","limiterankinggvg":"50","usarmensagempvp":1,"canalmensagenspvp":"11","usartrocaitenspvp":1,"comandoconsultapontos":"@@pontospvp","comandoconsultaitens":"@@itenspvp","comandosacaritens":"@@sacarpvp"}'),
-(4, 'mensageiro', '{"usarmensageiro":1}'),
-(5, 'tw', '{"usarupdatetw":1}'),
-(7, 'pve', '{"usarupdatepve":1}'),
-(9, 'scriptgolds', '{"usarscriptgolds":0}'),
-(10, 'updatepve', '{"UltUpdatepve":"11-08-2020 17:24:33","TempoGastopve":"271.2295"}'),
-(11, 'updatetw', '{"UltUpdatetw":"09-08-2020 00:00:08","TempoGastotw":"6.2162"}');
+(1, 'gerais', '{\"nomeservidor\":\"PW Frank Duque\",\"versaoservidor\":\"155\",\"linkpainel\":\"https:\\/\\/example.com\",\"vlogo\":7,\"extlogo\":\"png\",\"vfavicon\":13,\"extfavicon\":\"png\"}'),
+(2, 'integracoes', '{\"usarrecaptcha\":0,\"recaptchasitekey\":\"\",\"recaptchasecretkey\":\"\",\"usardisqus\":0,\"disqusshortname\":\"\",\"usarmailchimp\":0,\"mailchimpcode\":\"                                                \",\"usaranalytics\":0,\"analyticsid\":\"\",\"usarfacebook\":0,\"linkpaginafacebook\":\"https:\\/\\/www.facebook.com\\/PWoriental\\/?view_public_for=1180395175455495\"}'),
+(3, 'competitivo', '{\"usarpvp\":1,\"mostrarzeradosenegativospvp\":0,\"pontosmatarpvp\":\"4\",\"pontosmorrer\":null,\"usarpve\":1,\"usartw\":1,\"guildlisttxtultipdate\":\"2020-02-12 09:02:23\",\"guildlistpngultipdate\":\"2020-02-12 09:02:29\",\"usargvg\":1,\"mostrarzeradosenegativosgvg\":0,\"usarlistaclans\":1,\"limiterankingpvp\":\"50\",\"limiterankingpve\":\"51\",\"limiterankinggvg\":\"50\",\"usarmensagempvp\":1,\"canalmensagenspvp\":\"11\",\"usartrocaitenspvp\":1,\"comandoconsultapontos\":\"@@pontospvp\",\"comandoconsultaitens\":\"@@itenspvp\",\"comandosacaritens\":\"@@sacarpvp\"}'),
+(4, 'mensageiro', '{\"usarmensageiro\":1}'),
+(5, 'tw', '{\"usarupdatetw\":0}'),
+(7, 'pve', '{\"usarupdatepve\":1}'),
+(9, 'scriptgolds', '{\"usarscriptgolds\":0}'),
+(10, 'updatepve', '{\"UltUpdatepve\":\"10-05-2024 05:01:29\",\"TempoGastopve\":\"85.7790\"}'),
+(11, 'updatetw', '{\"UltUpdatetw\":\"10-05-2024 02:16:56\",\"TempoGastotw\":\"7.4322\"}');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `downloads`
+-- Estrutura para tabela `downloads`
 --
 
-CREATE TABLE IF NOT EXISTS `downloads` (
+CREATE TABLE `downloads` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `datacriacao` datetime NOT NULL,
@@ -248,13 +263,17 @@ CREATE TABLE IF NOT EXISTS `downloads` (
   `tipo` enum('client','patcher') NOT NULL,
   `link` varchar(1000) NOT NULL,
   `downloads` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+-- --------------------------------------------------------
 
 --
--- Estrutura da tabela `eventos`
+-- Estrutura para tabela `eventos`
 --
 
-CREATE TABLE IF NOT EXISTS `eventos` (
+CREATE TABLE `eventos` (
   `id` int(11) NOT NULL,
   `titulo` varchar(1000) NOT NULL,
   `conteudo` longtext NOT NULL,
@@ -262,26 +281,41 @@ CREATE TABLE IF NOT EXISTS `eventos` (
   `categoria_id` int(11) NOT NULL,
   `usuario_id` int(11) NOT NULL,
   `dataupdate` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
-
---
--- Estrutura da tabela `itens`
---
-
-CREATE TABLE IF NOT EXISTS `itens` (
-  `id` int(11) DEFAULT NULL,
-  `cor` varchar(10) DEFAULT NULL,
-  `nome` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `descricao` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
 
 --
--- Estrutura da tabela `itenspvp`
+-- Estrutura para tabela `itens`
 --
 
-CREATE TABLE IF NOT EXISTS `itenspvp` (
+CREATE TABLE `itens` (
   `id` int(11) NOT NULL,
+  `itemid` int(11) NOT NULL,
+  `cor` varchar(10) DEFAULT NULL,
+  `nome` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `descricao` text,
+  `datacriacao` datetime NOT NULL,
+  `pos` int(11) DEFAULT NULL,
+  `count` int(11) NOT NULL,
+  `max_count` int(11) NOT NULL,
+  `data` int(11) DEFAULT NULL,
+  `proctype` int(11) DEFAULT NULL,
+  `expire_date` int(11) DEFAULT NULL,
+  `guid1` int(11) DEFAULT NULL,
+  `guid2` int(11) DEFAULT NULL,
+  `mask` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `itens_pvp`
+--
+
+CREATE TABLE `itens_pvp` (
+  `id` int(11) NOT NULL,
+  `cor` varchar(6) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `pontossaque` int(11) NOT NULL,
   `itemid` int(11) NOT NULL,
@@ -294,24 +328,51 @@ CREATE TABLE IF NOT EXISTS `itenspvp` (
   `guid1` int(11) DEFAULT NULL,
   `guid2` int(11) DEFAULT NULL,
   `mask` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
 
 --
--- Estrutura da tabela `mensageiro`
+-- Estrutura para tabela `mensageiro`
 --
 
-CREATE TABLE IF NOT EXISTS `mensageiro` (
+CREATE TABLE `mensageiro` (
   `id` int(11) NOT NULL,
   `mensagem` varchar(255) NOT NULL,
   `periodicidade` varchar(100) NOT NULL,
   `canal` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Estrutura da tabela `noticias`
+-- Despejando dados para a tabela `mensageiro`
 --
 
-CREATE TABLE IF NOT EXISTS `noticias` (
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `mensagens_pvp`
+--
+
+CREATE TABLE `mensagens_pvp` (
+  `id` int(11) NOT NULL,
+  `mensagem` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Despejando dados para a tabela `mensagens_pvp`
+--
+
+INSERT INTO `mensagens_pvp` (`id`, `mensagem`) VALUES
+(26, '{{nick_matou}} acabou com {{nick_morreu}} em um confronto intenso!');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `noticias`
+--
+
+CREATE TABLE `noticias` (
   `id` int(11) NOT NULL,
   `titulo` varchar(255) NOT NULL,
   `conteudo` longtext NOT NULL,
@@ -322,27 +383,41 @@ CREATE TABLE IF NOT EXISTS `noticias` (
   `dataupdate` datetime NOT NULL,
   `destaque` smallint(6) NOT NULL DEFAULT '0',
   `arquivo_header` varchar(500) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Estrutura da tabela `saque_itens_pvp`
+-- Despejando dados para a tabela `noticias`
 --
 
-CREATE TABLE IF NOT EXISTS `saque_itens_pvp` (
+INSERT INTO `noticias` (`id`, `titulo`, `conteudo`, `datacriacao`, `categoria_id`, `usuario_id`, `resumo`, `dataupdate`, `destaque`, `arquivo_header`) VALUES
+(25, 'Teste de Notícia', ' Teste', '2024-05-05 18:04:26', 8, 1, 'Teste', '2024-05-08 19:59:12', 0, 'https://pwranking.frankduque.com/assets/site/img/blog-img-1.jpg'),
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `saque_itens_pvp`
+--
+
+CREATE TABLE `saque_itens_pvp` (
   `id` int(11) NOT NULL,
   `itemid` int(11) NOT NULL,
   `itemnome` varchar(255) NOT NULL,
   `pontos` int(11) NOT NULL,
   `charid` int(11) NOT NULL,
   `datasaque` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
 
 --
--- Estrutura da tabela `scriptgolds`
+-- Estrutura para tabela `scriptgolds`
 --
 
-CREATE TABLE IF NOT EXISTS `scriptgolds` (
+CREATE TABLE `scriptgolds` (
   `id` int(11) NOT NULL,
+  `mensagem` varchar(255) NOT NULL,
+  `canal` int(11) NOT NULL,
   `levelminimo` int(11) NOT NULL,
   `periodicidade` varchar(100) NOT NULL,
   `cultivominimo` int(11) NOT NULL,
@@ -355,355 +430,483 @@ CREATE TABLE IF NOT EXISTS `scriptgolds` (
   `entregarviaapi` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
+
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tutoriais`
+-- Estrutura para tabela `tutoriais`
 --
 
-CREATE TABLE IF NOT EXISTS `tutoriais` (
+CREATE TABLE `tutoriais` (
   `id` int(11) NOT NULL,
   `titulo` varchar(1000) NOT NULL,
   `conteudo` longtext NOT NULL,
   `datacriacao` datetime NOT NULL,
   `categoria_id` int(11) NOT NULL,
   `usuario_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Estrutura da tabela `updatepve`
---
 
-CREATE TABLE IF NOT EXISTS `updatepve` (
-  `id` int(11) NOT NULL,
-  `periodicidade` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `updatepve`
---
-
-INSERT INTO `updatepve` (`id`, `periodicidade`) VALUES
-(1, '*/5 * * * *');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `updatetw`
+-- Estrutura para tabela `updatepve`
 --
 
-CREATE TABLE IF NOT EXISTS `updatetw` (
+CREATE TABLE `updatepve` (
   `id` int(11) NOT NULL,
   `periodicidade` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Extraindo dados da tabela `updatetw`
---
 
-INSERT INTO `updatetw` (`id`, `periodicidade`) VALUES
-(1, '0 0 * * 0');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuarios`
+-- Estrutura para tabela `updatetw`
 --
 
-CREATE TABLE IF NOT EXISTS `usuarios` (
+CREATE TABLE `updatetw` (
+  `id` int(11) NOT NULL,
+  `periodicidade` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `usuarios`
+--
+
+CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `email` varchar(60) NOT NULL,
   `senha` varchar(100) NOT NULL,
   `dataCadastro` datetime NOT NULL,
   `permissao` enum('Admin','Equipe') NOT NULL DEFAULT 'Equipe',
-  `cargo_id` int(11) NOT NULL,
+  `cargo_id` int(11) DEFAULT NULL,
   `GAuthSecret` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `usuarios`
+-- Despejando dados para a tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `dataCadastro`, `permissao`, `cargo_id`, `GAuthSecret`) VALUES
 (1, 'Admin', 'admin@admin.com', '$2y$10$QsK1JDPN82Ynl6hTfHWLvuMsxdD4V6uc7kXIWnZqT7aqxyZ7f.tKu', '2020-02-27 08:45:26', 'Admin', 0, '');
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `acessos_paginas`
+-- Índices de tabela `acessos_paginas`
 --
 ALTER TABLE `acessos_paginas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `acessos_unicos_paginas`
+-- Índices de tabela `acessos_unicos_paginas`
 --
 ALTER TABLE `acessos_unicos_paginas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `anexosnoticias`
+-- Índices de tabela `anexosnoticias`
 --
 ALTER TABLE `anexosnoticias`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_anexo_noticias` (`noticiaid`);
 
 --
--- Indexes for table `cargos_usuarios`
+-- Índices de tabela `cargos_usuarios`
 --
 ALTER TABLE `cargos_usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `categoria_eventos`
+-- Índices de tabela `categoria_eventos`
 --
 ALTER TABLE `categoria_eventos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `categoria_noticias`
+-- Índices de tabela `categoria_noticias`
 --
 ALTER TABLE `categoria_noticias`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `categoria_tutoriais`
+-- Índices de tabela `categoria_tutoriais`
 --
 ALTER TABLE `categoria_tutoriais`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `competitivo_bloqueio`
+-- Índices de tabela `competitivo_bloqueio`
 --
 ALTER TABLE `competitivo_bloqueio`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `charid` (`charid`);
 
 --
--- Indexes for table `competitivo_guilds`
+-- Índices de tabela `competitivo_guilds`
 --
 ALTER TABLE `competitivo_guilds`
-  ADD UNIQUE KEY `fid` (`guild_id`);
+  ADD UNIQUE KEY `fid` (`guild_id`),
+  ADD KEY `master` (`master`);
 
 --
--- Indexes for table `competitivo_mensagens`
---
-ALTER TABLE `competitivo_mensagens`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `competitivo_personagens`
+-- Índices de tabela `competitivo_personagens`
 --
 ALTER TABLE `competitivo_personagens`
   ADD PRIMARY KEY (`charid`),
-  ADD UNIQUE KEY `charid` (`charid`);
+  ADD UNIQUE KEY `charid` (`charid`),
+  ADD KEY `charid_2` (`charid`),
+  ADD KEY `guild_id` (`guild_id`);
 
 --
--- Indexes for table `competitivo_pvp`
+-- Índices de tabela `competitivo_pvp`
 --
 ALTER TABLE `competitivo_pvp`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `matou_guild_id` (`matou_guild_id`),
+  ADD KEY `morreu_guild_id` (`morreu_guild_id`),
+  ADD KEY `matou_id` (`matou_id`),
+  ADD KEY `morreu_id` (`morreu_id`);
 
 --
--- Indexes for table `competitivo_territorios`
+-- Índices de tabela `competitivo_territorios`
 --
 ALTER TABLE `competitivo_territorios`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`);
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `challenger` (`challenger`),
+  ADD KEY `owner` (`owner`);
 
 --
--- Indexes for table `configuracoes`
+-- Índices de tabela `configuracoes`
 --
 ALTER TABLE `configuracoes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `downloads`
+-- Índices de tabela `downloads`
 --
 ALTER TABLE `downloads`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `eventos`
+-- Índices de tabela `eventos`
 --
 ALTER TABLE `eventos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `categoria_id` (`categoria_id`),
+  ADD KEY `usuario_id` (`usuario_id`);
 
 --
--- Indexes for table `itens`
+-- Índices de tabela `itens`
 --
 ALTER TABLE `itens`
-  ADD UNIQUE KEY `id` (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `itemid` (`itemid`);
 
 --
--- Indexes for table `itenspvp`
+-- Índices de tabela `itens_pvp`
 --
-ALTER TABLE `itenspvp`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `itens_pvp`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `itemid` (`itemid`);
 
 --
--- Indexes for table `mensageiro`
+-- Índices de tabela `mensageiro`
 --
 ALTER TABLE `mensageiro`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `noticias`
+-- Índices de tabela `mensagens_pvp`
+--
+ALTER TABLE `mensagens_pvp`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `noticias`
 --
 ALTER TABLE `noticias`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `categoria_id` (`categoria_id`),
+  ADD KEY `usuario_id` (`usuario_id`);
 
 --
--- Indexes for table `saque_itens_pvp`
+-- Índices de tabela `saque_itens_pvp`
 --
 ALTER TABLE `saque_itens_pvp`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `charid` (`charid`);
 
 --
--- Indexes for table `scriptgolds`
+-- Índices de tabela `scriptgolds`
 --
 ALTER TABLE `scriptgolds`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tutoriais`
+-- Índices de tabela `tutoriais`
 --
 ALTER TABLE `tutoriais`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `categoria_id` (`categoria_id`),
+  ADD KEY `usuario_id` (`usuario_id`);
 
 --
--- Indexes for table `updatepve`
+-- Índices de tabela `updatepve`
 --
 ALTER TABLE `updatepve`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `updatetw`
+-- Índices de tabela `updatetw`
 --
 ALTER TABLE `updatetw`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usuarios`
+-- Índices de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cargo_id` (`cargo_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `acessos_paginas`
+-- AUTO_INCREMENT de tabela `acessos_paginas`
 --
 ALTER TABLE `acessos_paginas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+
 --
--- AUTO_INCREMENT for table `acessos_unicos_paginas`
+-- AUTO_INCREMENT de tabela `acessos_unicos_paginas`
 --
 ALTER TABLE `acessos_unicos_paginas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19497;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19831;
+
 --
--- AUTO_INCREMENT for table `anexosnoticias`
+-- AUTO_INCREMENT de tabela `anexosnoticias`
 --
 ALTER TABLE `anexosnoticias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `cargos_usuarios`
+-- AUTO_INCREMENT de tabela `cargos_usuarios`
 --
 ALTER TABLE `cargos_usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
--- AUTO_INCREMENT for table `categoria_eventos`
+-- AUTO_INCREMENT de tabela `categoria_eventos`
 --
 ALTER TABLE `categoria_eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
--- AUTO_INCREMENT for table `categoria_noticias`
+-- AUTO_INCREMENT de tabela `categoria_noticias`
 --
 ALTER TABLE `categoria_noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
--- AUTO_INCREMENT for table `categoria_tutoriais`
+-- AUTO_INCREMENT de tabela `categoria_tutoriais`
 --
 ALTER TABLE `categoria_tutoriais`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
--- AUTO_INCREMENT for table `competitivo_bloqueio`
+-- AUTO_INCREMENT de tabela `competitivo_bloqueio`
 --
 ALTER TABLE `competitivo_bloqueio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
--- AUTO_INCREMENT for table `competitivo_mensagens`
---
-ALTER TABLE `competitivo_mensagens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
---
--- AUTO_INCREMENT for table `competitivo_pvp`
+-- AUTO_INCREMENT de tabela `competitivo_pvp`
 --
 ALTER TABLE `competitivo_pvp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31893;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31915;
+
 --
--- AUTO_INCREMENT for table `configuracoes`
+-- AUTO_INCREMENT de tabela `configuracoes`
 --
 ALTER TABLE `configuracoes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
--- AUTO_INCREMENT for table `downloads`
+-- AUTO_INCREMENT de tabela `downloads`
 --
 ALTER TABLE `downloads`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
 --
--- AUTO_INCREMENT for table `eventos`
+-- AUTO_INCREMENT de tabela `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
--- AUTO_INCREMENT for table `itenspvp`
+-- AUTO_INCREMENT de tabela `itens`
 --
-ALTER TABLE `itenspvp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+ALTER TABLE `itens`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67079;
+
 --
--- AUTO_INCREMENT for table `mensageiro`
+-- AUTO_INCREMENT de tabela `itens_pvp`
+--
+ALTER TABLE `itens_pvp`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de tabela `mensageiro`
 --
 ALTER TABLE `mensageiro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+
 --
--- AUTO_INCREMENT for table `noticias`
+-- AUTO_INCREMENT de tabela `mensagens_pvp`
+--
+ALTER TABLE `mensagens_pvp`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT de tabela `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
 --
--- AUTO_INCREMENT for table `saque_itens_pvp`
+-- AUTO_INCREMENT de tabela `saque_itens_pvp`
 --
 ALTER TABLE `saque_itens_pvp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT for table `scriptgolds`
+-- AUTO_INCREMENT de tabela `scriptgolds`
 --
 ALTER TABLE `scriptgolds`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT for table `tutoriais`
+-- AUTO_INCREMENT de tabela `tutoriais`
 --
 ALTER TABLE `tutoriais`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
 --
--- AUTO_INCREMENT for table `updatepve`
+-- AUTO_INCREMENT de tabela `updatepve`
 --
 ALTER TABLE `updatepve`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
--- AUTO_INCREMENT for table `updatetw`
+-- AUTO_INCREMENT de tabela `updatetw`
 --
 ALTER TABLE `updatetw`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `anexosnoticias`
+--
+ALTER TABLE `anexosnoticias`
+  ADD CONSTRAINT `fk_anexo_noticias` FOREIGN KEY (`noticiaid`) REFERENCES `noticias` (`id`) ON DELETE CASCADE;
+
+--
+-- Restrições para tabelas `competitivo_bloqueio`
+--
+ALTER TABLE `competitivo_bloqueio`
+  ADD CONSTRAINT `competitivo_bloqueio_ibfk_1` FOREIGN KEY (`charid`) REFERENCES `competitivo_personagens` (`charid`);
+
+--
+-- Restrições para tabelas `competitivo_guilds`
+--
+ALTER TABLE `competitivo_guilds`
+  ADD CONSTRAINT `competitivo_guilds_ibfk_1` FOREIGN KEY (`master`) REFERENCES `competitivo_personagens` (`charid`);
+
+--
+-- Restrições para tabelas `competitivo_personagens`
+--
+ALTER TABLE `competitivo_personagens`
+  ADD CONSTRAINT `competitivo_personagens_ibfk_1` FOREIGN KEY (`guild_id`) REFERENCES `competitivo_guilds` (`guild_id`);
+
+--
+-- Restrições para tabelas `competitivo_pvp`
+--
+ALTER TABLE `competitivo_pvp`
+  ADD CONSTRAINT `competitivo_pvp_ibfk_1` FOREIGN KEY (`matou_guild_id`) REFERENCES `competitivo_guilds` (`guild_id`),
+  ADD CONSTRAINT `competitivo_pvp_ibfk_2` FOREIGN KEY (`morreu_guild_id`) REFERENCES `competitivo_guilds` (`guild_id`),
+  ADD CONSTRAINT `competitivo_pvp_ibfk_3` FOREIGN KEY (`matou_id`) REFERENCES `competitivo_personagens` (`charid`),
+  ADD CONSTRAINT `competitivo_pvp_ibfk_4` FOREIGN KEY (`morreu_id`) REFERENCES `competitivo_personagens` (`charid`);
+
+--
+-- Restrições para tabelas `competitivo_territorios`
+--
+ALTER TABLE `competitivo_territorios`
+  ADD CONSTRAINT `competitivo_territorios_ibfk_1` FOREIGN KEY (`challenger`) REFERENCES `competitivo_guilds` (`guild_id`),
+  ADD CONSTRAINT `competitivo_territorios_ibfk_2` FOREIGN KEY (`owner`) REFERENCES `competitivo_guilds` (`guild_id`);
+
+--
+-- Restrições para tabelas `eventos`
+--
+ALTER TABLE `eventos`
+  ADD CONSTRAINT `eventos_ibfk_1` FOREIGN KEY (`categoria_id`) REFERENCES `categoria_eventos` (`id`),
+  ADD CONSTRAINT `eventos_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
+
+--
+-- Restrições para tabelas `itens_pvp`
+--
+ALTER TABLE `itens_pvp`
+  ADD CONSTRAINT `itens_pvp_ibfk_1` FOREIGN KEY (`itemid`) REFERENCES `itens` (`itemid`);
+
+--
+-- Restrições para tabelas `noticias`
+--
+ALTER TABLE `noticias`
+  ADD CONSTRAINT `noticias_ibfk_1` FOREIGN KEY (`categoria_id`) REFERENCES `categoria_noticias` (`id`),
+  ADD CONSTRAINT `noticias_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
+
+--
+-- Restrições para tabelas `saque_itens_pvp`
+--
+ALTER TABLE `saque_itens_pvp`
+  ADD CONSTRAINT `saque_itens_pvp_ibfk_1` FOREIGN KEY (`charid`) REFERENCES `competitivo_personagens` (`charid`);
+
+--
+-- Restrições para tabelas `tutoriais`
+--
+ALTER TABLE `tutoriais`
+  ADD CONSTRAINT `tutoriais_ibfk_1` FOREIGN KEY (`categoria_id`) REFERENCES `categoria_tutoriais` (`id`),
+  ADD CONSTRAINT `tutoriais_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
+
+--
+-- Restrições para tabelas `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`cargo_id`) REFERENCES `cargos_usuarios` (`id`);
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

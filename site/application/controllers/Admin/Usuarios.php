@@ -78,7 +78,7 @@ class Usuarios extends AdminController
             'nome' => $this->input->post('nome', TRUE),
             'email' => $this->input->post('email', TRUE),
             'senha' => password_hash($this->input->post('senha', TRUE), PASSWORD_DEFAULT),
-            'cargo_id' => $cargo == "Admin" ? 0 : $cargo,
+            'cargo_id' => $cargo == "Admin" ? null : $cargo,
             'permissao' => $cargo == "Admin" ? "Admin" : "Equipe"
 
         ];

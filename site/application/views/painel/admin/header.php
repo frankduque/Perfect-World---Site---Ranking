@@ -205,8 +205,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
             $paginasPvp = ['competitivo/pvp/index', 'competitivo/pvp/detalhes'];
             $paginasMensagens = ['competitivo/pvp/mensagens', 'competitivo/pvp/form_mensagem'];
             $paginasTrocaItensPvp = ['competitivo/pvp/itens', 'competitivo/pvp/form_item'];
-            $paginaRelatorioTrocas = ['competitivo/pvp/trocaspvp'];
-            $paginasCompetitivo = array_merge($paginasPvp, $paginasMensagens, $paginasTrocaItensPvp);
+            $paginaRelatorioTrocas = ['competitivo/pvp/trocas'];
+            $paginasCompetitivo = array_merge($paginasPvp, $paginasMensagens, $paginasTrocaItensPvp, $paginaRelatorioTrocas);
             ?>
             <li class="nav-item <?php echo (in_array($pagina, $paginasCompetitivo) ? 'active' : '') ?>">
               <a class="nav-link <?php echo (in_array($pagina, $paginasCompetitivo) ? 'active' : 'collapsed') ?>" href="#"
@@ -232,7 +232,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
               </li>
               <li class="nav-item">
                 <a class="nav-link ml-4 <?php echo (in_array($pagina, $paginaRelatorioTrocas) ? 'text-info active' : '') ?>"
-                  href="<?php echo base_url('admin/itens_pvp/saques') ?>">Relatório de saques</a>
+                  href="<?php echo base_url('admin/itens_pvp/trocas') ?>">Relatório de saques</a>
               </li>
             </div>
           <?php endif; ?>
